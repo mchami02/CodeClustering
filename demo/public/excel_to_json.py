@@ -3,9 +3,12 @@ import pandas as pd
 import hazm
 import networkx as nx
 import random
+from itertools import chain 
 
+
+""" READING AND CLEANING THE EXCEL"""
 norm = hazm.Normalizer()
-excel_file = 'data.xlsx'
+excel_file = 'data (2).xlsx'
 
 df_edges = pd.read_excel(excel_file, sheet_name=0, header=0)
 for i in range(len(df_edges)):
@@ -25,8 +28,28 @@ for i in range(len(nodes)):
 	nodes[i]['key'] = norm.normalize(nodes[i]['key']).replace('\u200c', ' ').strip()
 	nodes[i]['label'] = norm.normalize(nodes[i]['label']).replace('\u200c', ' ').strip()
 	nodes[i]['tag'] = norm.normalize(nodes[i]['tag']).replace('\u200c', ' ').strip()
+""" __________________________________________________ """
 
 
+
+
+""" CHECK IF FOR ANY BUG IN EXCEL GENERATION """
+edges_check = set(list(chain.from_iterable(edges)))
+nodes_check =  set([i['key'] for i in nodes])
+
+if edges_check != nodes_check:
+    for item in nodes_check.symmetric_difference(edges_check):
+        print(item)
+    raise ValueError("Error: Inconsistent Lengths of Edges and Nodes. \n Description: The values provided in the edges and nodes are not equal. Please review the printed values.")
+""" __________________________________________________ """
+
+
+
+
+
+
+
+""" START TO VISUALIZING DATA """ 
 G=nx.from_pandas_edgelist(df_edges, 'source', 'destination')
 pos = nx.fruchterman_reingold_layout(G)
 #pos = nx.circular_layout(G)
