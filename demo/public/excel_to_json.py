@@ -56,6 +56,22 @@ pos = nx.fruchterman_reingold_layout(G)
 #pos = nx.random_layout(G)
 #pos = nx.spectral_layout(G)
 #pos = nx.spring_layout(G)
+#pos = nx.graphviz_layout(G)
+#pos = nx.pygraphviz_layout(G)
+#pos = nx.graphviz_layout(G)
+#pos = nx.pydot_layout(G)
+#pos = nx.bipartite_layout(G)
+#pos = nx.circular_layout(G)
+#pos = nx.kamada_kawai_layout(G)
+#pos = nx.planar_layout(G)
+#pos = nx.random_layout(G)
+#pos = nx.rescale_layout(G)
+#pos = nx.shell_layout(G)
+#pos = nx.spring_layout(G)
+#pos = nx.spectral_layout(G)
+#pos = nx.spiral_layout(G)
+#pos = nx.multipartite_layout(G)
+
 for key, position in pos.items():
     for dic in nodes:
         if dic['key'] == key:
