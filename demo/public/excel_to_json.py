@@ -8,7 +8,7 @@ from itertools import chain
 
 """ READING AND CLEANING THE EXCEL"""
 norm = hazm.Normalizer()
-excel_file = 'data (2).xlsx'
+excel_file = 'data.xlsx'
 
 df_edges = pd.read_excel(excel_file, sheet_name=0, header=0)
 for i in range(len(df_edges)):
@@ -91,15 +91,16 @@ json_str = """{
   "edges": """ + str(edges) + """  ,
   "clusters": [ """+clusters+""" ],
   "tags": [
-    {"key": "حسابداری و حسابرسی در بازار سرمایه اسلامی", "image": "hesabdari.svg" },
-    {"key": "مدیریت ریسک در بازار سرمایه اسلامی", "image": "risk.svg" },
-    {"key": "قوانین و مقررات در بازار سرمایه اسلامی", "image": "ghavanin.svg" },
-    {"key": "سایر", "image": "sayer.svg" },
-    {"key": "نهادهای مالی فعال در بازار سرمایه اسلامی", "image": "nahad.svg" }, 
-    {"key": "بازارهای مالی اسلامی", "image": "bazar.svg" },
-    {"key": "طبقه بندی بازار سرمایه اسلامی", "image": "tabaghebazar.svg" },
-    {"key": "مبانی، اصول و مفاهیم بازار سرمایه اسلامی", "image": "mabani.svg" },
-    {"key": "ابزارهای مالی اسلامی", "image": "abzar.svg" }
+    {"key": "حسابداری و حسابرسی در بازار سرمایه اسلامی", "image": "hesabdari.png" },
+    {"key": "مدیریت ریسك در بازار سرمایه اسلامی", "image": "risk.png" },
+    {"key": "قوانین و مقررات در بازار سرمایه اسلامی", "image": "ghavanin.png" },
+    {"key": "سایر", "image": "sayer.png" },
+    {"key": "نهادهای مالی فعال در بازار سرمایه اسلامی", "image": "nahad.png" }, 
+    {"key": "طبقه بندی بازار سرمایه اسلامی", "image": "tabaghebazar.png" },
+    {"key": "مبانی، اصول و مفاهیم بازار سرمایه اسلامی", "image": "mabani.png" },
+    {"key": "ابزارهای مالی اسلامی", "image": "abzar.png" },
+    {"key": "تشکل های خود انتظام بازار سرمایه", "image": "bazar.png" },
+    {"key": "معاملات و قراردادها", "image": "bazar.png" }
   ]}"""
 
 _ = open('dataset.json', 'w', encoding='utf-8').write(str(json_str).replace("'", '"'))
