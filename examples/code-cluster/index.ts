@@ -19,8 +19,11 @@ import circular from "graphology-layout/circular";
 import forceAtlas2 from "graphology-layout-forceatlas2";
 import { cropToLargestConnectedComponent } from "graphology-components";
 
+const RED = "#FA4F40";
+const BLUE = "#727EE0";
+
 // 1. Load CSV file:
-Papa.parse<{ name: string; acronym: string; subject_terms: string }>("./data.csv", {
+Papa.parse<{ CodeID: string; IT: number; Distance: number }>("./clustering_data.csv", {
   download: true,
   header: true,
   delimiter: ",",
@@ -29,55 +32,56 @@ Papa.parse<{ name: string; acronym: string; subject_terms: string }>("./data.csv
 
     // 2. Build the bipartite graph:
     results.data.forEach((line) => {
-      const institution = line.name;
-      const acronym = line.acronym;
+      const CodeType = line.CodeID;
+      const IT = line.IT;
+      const Distance = line.Distance;
 
       // Create the institution node:
-      graph.addNode(institution, {
-        nodeType: "institution",
-        label: [acronym, institution].filter((s) => !!s).join(" - "),
-      });
+      if (!graph.hasNode(IT)) {
+        graph.addNode(IT, {
+          nodeType: "Implementation",
+          label: IT,
+          color: RED,
+          size: 10
+        });
+      }
 
       // Extract subjects list:
-      const subjects = (line.subject_terms.match(/(?:\* )[^\n\r]*/g) || []).map((str) => str.replace(/^\* /, ""));
-
+      const subject = CodeType;
+      console.log(subject);
       // For each subject, create the node if it does not exist yet:
-      subjects.forEach((subject) => {
-        if (!graph.hasNode(subject)) graph.addNode(subject, { nodeType: "subject", label: subject });
+      graph.addNode(CodeType, { nodeType: "Code", label: CodeType, color: BLUE, size: 4 });
+      // console.log(Distance);
+      graph.addEdge(IT, subject, {size: Distance});
 
-        graph.addEdge(institution, subject, { weight: 1 });
-      });
     });
-
-    // 3. Only keep the main connected component:
-    cropToLargestConnectedComponent(graph);
 
     // 4. Add colors to the nodes, based on node types:
-    const COLORS: Record<string, string> = { institution: "#FA5A3D", subject: "#5A75DB" };
-    graph.forEachNode((node, attributes) =>
-      graph.setNodeAttribute(node, "color", COLORS[attributes.nodeType as string]),
-    );
+    // const COLORS: Record<string, string> = { IT: "#FA5A3D", CodeType: "#5A75DB" };
+    // graph.forEachNode((node, attributes) =>
+    //   graph.setNodeAttribute(node, "color", COLORS[attributes.nodeType as string]),
+    // );
 
     // 5. Use degrees for node sizes:
-    const degrees = graph.nodes().map((node) => graph.degree(node));
-    const minDegree = Math.min(...degrees);
-    const maxDegree = Math.max(...degrees);
-    const minSize = 2,
-      maxSize = 15;
-    graph.forEachNode((node) => {
-      const degree = graph.degree(node);
-      graph.setNodeAttribute(
-        node,
-        "size",
-        minSize + ((degree - minDegree) / (maxDegree - minDegree)) * (maxSize - minSize),
-      );
-    });
+    // const degrees = graph.nodes().map((node) => graph.degree(node));
+    // const minDegree = Math.min(...degrees);
+    // const maxDegree = Math.max(...degrees);
+    // const minSize = 2,
+    //   maxSize = 15;
+    // graph.forEachNode((node) => {
+    //   const degree = graph.degree(node);
+    //   graph.setNodeAttribute(
+    //     node,
+    //     "size",
+    //     minSize + ((degree - minDegree) / (maxDegree - minDegree)) * (maxSize - minSize),
+    //   );
+    // });
 
     // 6. Position nodes on a circle, then run Force Atlas 2 for a while to get
     //    proper graph layout:
     circular.assign(graph);
     const settings = forceAtlas2.inferSettings(graph);
-    forceAtlas2.assign(graph, { settings, iterations: 600 });
+    forceAtlas2.assign(graph, { settings, iterations: 100 });
 
     // 7. Hide the loader from the DOM:
     const loader = document.getElementById("loader") as HTMLElement;
