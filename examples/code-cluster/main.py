@@ -9,7 +9,7 @@ def cluster_code():
     max_runs = 100
     results_path = 'C:/Users/rasan/Documents/Rasan/Zürich/ETHZ/MA2/AI_Center_Project/JPlag/cli/target/results'
     code_files_path = 'C:/Users/rasan/Documents/Rasan/Zürich/ETHZ/MA2/AI_Center_Project/JPlag/cli/target/mini_data'
-    command = f"java -jar {jplag_path} -l python3  --cluster-alg SPECTRAL --cluster-spectral-bandwidth={bandwidth} --cluster-spectral-max-runs={max_runs} -r {results_path} {code_files_path}"
+    command = f"java -jar {jplag_path} -l python3 -n=9999 --cluster-alg SPECTRAL --cluster-spectral-bandwidth={bandwidth} --cluster-spectral-max-runs={max_runs} -r {results_path} {code_files_path}"
     subprocess.call(command, shell=True)
     return results_path
 
