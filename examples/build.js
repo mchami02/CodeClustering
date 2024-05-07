@@ -7,7 +7,6 @@ const kotatsu = require("kotatsu");
 const { eachSeries } = require("async");
 
 const outputDir = process.argv[2];
-
 if (!outputDir) {
   console.error("Missing output directory!");
   process.exit(1);
@@ -21,9 +20,10 @@ function buildExample(name, callback) {
   console.log(`Building ${name}...`);
 
   const inputSubFolder = path.resolve(__dirname, name);
-  const outputSubFolder = path.resolve(outputDir, name);
-
-  fsExtra.mkdirSync(outputSubFolder);
+  const outputSubFolder = path.resolve(outputDir);
+  console.log(inputSubFolder)
+  console.log(outputSubFolder)
+  // fsExtra.mkdirSync(outputSubFolder);
   fsExtra.mkdirSync(path.resolve(outputSubFolder, "build"));
   fsExtra.copyFileSync(path.resolve(inputSubFolder, "index.html"), path.resolve(outputSubFolder, "index.html"));
 
