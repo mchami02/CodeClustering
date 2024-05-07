@@ -1,0 +1,227 @@
+Code_Block,Cluster
+"plt.figure('Wind by month')
+sns.boxplot(x='month', y='windspeed', data=df)
+plt.title('Windspeed by Month', fontsize=20)
+plt.show()",0
+"# chart for number of account created
+train['date_account_created_new'] = pd.to_datetime(train['date_account_created'])
+sns.set_style('ticks')
+fig, ax = plt.subplots()
+fig.set_size_inches(10, 8)
+train.date_account_created_new.value_counts().plot(kind='line', linewidth=1, color='#1F618D')
+plt.xlabel('Date ', size=20)
+plt.ylabel('Number of account created ', size=15)
+plt.tick_params(labelsize=12)
+#sns.despine()",0
+"df['num_photos'] = df['photos'].apply(len)
+df['num_features'] = df['features'].apply(len)
+df['num_description_words'] = df['description'].apply(lambda x: len(x.split(' ')))
+df['created'] = pd.to_datetime(df['created'])
+df['created_year'] = df['created'].dt.year
+df['created_month'] = df['created'].dt.month
+df['created_day'] = df['created'].dt.day
+df['created_hour'] = df['created'].dt.hour
+df['created_minute'] = df['created'].dt.minute",1
+"df = pd.read_json(open(""../input/test.json"", ""r""))
+print(df.shape)
+df[""num_photos""] = df[""photos""].apply(len)
+df[""num_features""] = df[""features""].apply(len)
+df[""num_description_words""] = df[""description""].apply(lambda x: len(x.split("" "")))
+df[""created""] = pd.to_datetime(df[""created""])
+df[""created_year""] = df[""created""].dt.year
+df[""created_month""] = df[""created""].dt.month
+df[""created_day""] = df[""created""].dt.day
+X = df[num_feats]
+
+y = clf.predict_proba(X)
+",1
+"train['datetime'] = pd.to_datetime(train['datetime'])
+train['day'] = train['datetime'].dt.day
+train['hour'] = train['datetime'].dt.hour
+train['dayofweek'] = train['datetime'].dt.dayofweek
+train['month'] = train['datetime'].dt.month
+train['year'] = train['datetime'].dt.year
+train['weekend'] = (train['dayofweek'] ==5) | (train['dayofweek'] == 6)",1
+"train = train.rename(columns={""A-coref"": ""A"", ""B-coref"": ""B""})
+train[""A""] = train[""A""].astype(int)
+train[""B""] = train[""B""].astype(int)
+train[""NEITHER""] = 1.0 - (train[""A""] + train[""B""])",1
+"df_ga_full['app_lab']= df_ga_full['device_id'].map(df_events)
+df_ga_full['time_most']= df_ga_full['device_id'].map(time_most)
+df_ga_full['time_large']= df_ga_full['device_id'].map(time_large)
+df_ga_full['time_small']= df_ga_full['device_id'].map(time_small)",1
+"print(train['Label'].value_counts())
+
+rcParams['figure.figsize'] = 10,5
+sb.barplot(x = train['Label'].value_counts().index, y = train['Label'].value_counts().values)
+plt.title('Label counts')
+plt.show()",1
+"average_assortment = df_stores_new.groupby('Assortment')['Sales', 'Customers'].mean()
+
+fig, (axis1,axis2) = plt.subplots(1,2,figsize=(15,4))
+sns.barplot(average_assortment.index, average_assortment['Sales'], ax=axis1)
+sns.barplot(average_assortment.index, average_assortment['Customers'], ax=axis2)",1
+"fig = plt.figure(figsize=(7, 4))
+sns.barplot(x = df_gender_age_train.gender.value_counts().index, y=df_gender_age_train.gender.value_counts().values, ax=fig.gca())
+sns.despine()
+plt.title('Gender distribution')",1
+"test_merged['Open']=test_merged['Open'].fillna(1)
+test_merged['Date']=pd.to_datetime(test_merged['Date'],format='%Y-%m-%d')
+test_merged['day']=test_merged['Date'].dt.day
+test_merged['month']=test_merged['Date'].dt.month
+test_merged['year']=test_merged['Date'].dt.year
+
+
+test_merged['StateHoliday']=test_merged['StateHoliday'].map({'0':0,'a':1})
+test_merged['StateHoliday']=test_merged['StateHoliday'].astype(int)
+test_merged.isna().sum()",1
+"test_merged['Assortment']=test_merged['Assortment'].map({'a':1,'b':2,'c':3})
+test_merged['Assortment']=test_merged['Assortment'].astype(int)
+test_merged['StoreType']=test_merged['StoreType'].map({'a':1,'b':2,'c':3,'d':4})
+test_merged['StoreType']=test_merged['StoreType'].astype(int)
+map_promo={'Jan,Apr,Jul,Oct':1,'Feb,May,Aug,Nov':2,'Mar,Jun,Sept,Dec':3}
+test_merged['PromoInterval']=test_merged['PromoInterval'].map(map_promo)",1
+"store['CompetitionDistance']=store['CompetitionDistance'].fillna(store['CompetitionDistance'].max())
+store['CompetitionOpenSinceMonth']=store['CompetitionOpenSinceMonth'].fillna(store['CompetitionOpenSinceMonth'].mode().iloc[0])
+store['CompetitionOpenSinceYear']=store['CompetitionOpenSinceYear'].fillna(store['CompetitionOpenSinceYear'].mode().iloc[0])",1
+"df_phone_brands.phone_brand = df_phone_brands.phone_brand.map(str.strip).map(str.lower)
+df_phone_brands.device_model = df_phone_brands.device_model.map(str.strip).map(str.lower)
+df_phone_brands.device_model = df_phone_brands.phone_brand.str.cat(df_phone_brands.device_model)",1
+"test_df[""hour""] = [t.hour for t in pd.DatetimeIndex(test_df.datetime)]
+test_df[""day""] = [t.dayofweek for t in pd.DatetimeIndex(test_df.datetime)]
+test_df[""month""] = [t.month for t in pd.DatetimeIndex(test_df.datetime)]
+test_df['year'] = [t.year for t in pd.DatetimeIndex(test_df.datetime)]
+test_df['year'] = test_df['year'].map({2011:0, 2012:1})
+test_df.head()'",1
+"df_t=df_t.drop('Open Date',axis=1)
+df_t['Type'].value_counts()
+ty={'FC':0,'IL':1,'DT':2}
+df_t['Type']=df_t['Type'].map(ty)
+cg={'Big Cities':0,'Other':1}
+df_t['City Group']=df_t['City Group'].map(cg)
+x=0
+c={}
+for i in df_t['City'].unique():
+    c.update({i:x})
+    x=x+1
+df_t['City']=df_t['City'].map(c)",1
+"for df in (joined,joined_test):
+    df.loc[df.Promo2Days<0, ""Promo2Days""] = 0
+    df.loc[df.Promo2SinceYear<1990, ""Promo2Days""] = 0
+    df[""Promo2Weeks""] = df[""Promo2Days""]//7
+    df.loc[df.Promo2Weeks<0, ""Promo2Weeks""] = 0
+    df.loc[df.Promo2Weeks>25, ""Promo2Weeks""] = 25
+    df.Promo2Weeks.unique()",1
+"# let`s load datasets as usually
+
+train  = pd.read_csv('/kaggle/input/rossmann-store-sales/train.csv')
+test   = pd.read_csv('/kaggle/input/rossmann-store-sales/test.csv')
+stores = pd.read_csv('/kaggle/input/rossmann-store-sales/store.csv')
+sample = pd.read_csv('/kaggle/input/rossmann-store-sales/sample_submission.csv')",2
+"rf_reg = RandomForestRegressor(n_estimators=500)
+rf_reg.fit(X_train, y_train)
+pred = rf_reg.predict(X_test)
+
+y_test_exp = np.expm1(y_test)
+pred_exp = np.expm1(pred)
+print('RandomForestRegressor RMSLE:', rmsle(y_test_exp, pred_exp))",2
+"pca = PCA(n_components=10)<br><br>pca.fit(features)<br>principalComponents = pca.transform(features)<br>test_principalComponenta = pca.transform(sfeatures)<br>print(principalComponents.shape, ""\<br>"", test_principalComponenta.shape)",2
+"from sklearn.tree import DecisionTreeRegressor as dt
+dt_m = dt(random_state=0)
+dt_m.fit(X_train,y_train)
+y_pred_dt=dt_m.predict(X_test)
+y_pred_dt_train=dt_m.predict(X_train)
+print('RMSLE for test: ',rmsle(y_test, y_pred_dt, True))
+print('RMSLE for train: ',rmsle(y_train, y_pred_dt_train, True))",2
+"from sklearn import linear_model
+import numpy 
+from sklearn.ensemble import RandomForestRegressor
+cls = RandomForestRegressor(n_estimators=100)
+cls.fit(X_train, Y_train)
+pred = cls.predict(X_test)
+pred = numpy.exp(pred)
+cls.score(X_train, Y_train)",2
+"df_train['Year'] = df_train['Date'].apply(lambda x: int(x[:4]))
+df_train['Month'] = df_train['Date'].apply(lambda x: int(x[5:7]))
+df_train['Day'] = df_train['Date'].apply(lambda x: int(x[8:]))",3
+"df_train['Year'] = df_train['Date'].apply(lambda x: int(x[0:4]))
+df_train['Month'] = df_train['Date'].apply(lambda x: int(x[5:7]))
+df_train['Day'] = df_train['Date'].apply(lambda x: int(x[8:10]))
+df_test['Year'] = df_test['Date'].apply(lambda x: int(x[0:4]))
+df_test['Month'] = df_test['Date'].apply(lambda x: int(x[5:7]))
+df_test['Day'] = df_test['Date'].apply(lambda x: int(x[8:10]))",3
+"df = pd.read_json('../input/train.json')
+df_test = pd.read_json('../input/test.json')
+df['created'] = pd.to_datetime(df.created)
+df_test['created'] = pd.to_datetime(df_test.created)",4
+"# Test Set Predictions
+test_proba = clf.predict_proba(test)
+test_preds = test_proba[:,1]
+test_res=clf.predict(test)
+
+# Format for submission
+output = pd.DataFrame({ 'activity_id' : test_ids, 'outcome': test_preds })
+output1 = pd.DataFrame({ 'activity_id' : test_ids, 'outcome': test_res })
+output.head()",4
+"#Code for RMSPE Value
+def ToWeight(y):
+    w = np.zeros(y.shape, dtype=float)
+    ind = y != 0
+    w[ind] = 1./(y[ind]**2)
+    return w
+
+def rmspe(y, yhat):
+    w = ToWeight(y)
+    rmspe = np.sqrt(np.mean( w * (y - yhat)**2 ))
+    return rmspe",5
+"def ToWeight(y):
+    w = np.zeros(y.shape, dtype=float)
+    ind = y != 0
+    w[ind] = 1./(y[ind]**2)
+    return w
+
+def rmspe(y, yhat):
+    w = ToWeight(y)
+    rmspe = np.sqrt(np.mean( w * (y - yhat)**2 ))
+    return rmspe
+
+y_test_inv=np.exp(y_test)-1
+y_pred_inv=np.exp(y_pred)-1
+rmse_test = np.sqrt(mean_squared_error(y_test_inv,y_pred_inv))
+rmspe_test = rmspe(y_test_inv,y_pred_inv)
+print(rmse_test,rmspe_test)",5
+"plt.figure(figsize=(8,6))
+sns.distplot(df_train1['Horizontal_Distance_To_Hydrology'], fit = stats.norm)
+fig = plt.figure(figsize=(8,6))
+res = stats.probplot(df_train1['Horizontal_Distance_To_Hydrology'], plot=plt)",6
+"# Hillshade_Noon
+fig = plt.figure(figsize=(8,6))
+sns.distplot(df_train1['Hillshade_Noon'],fit=stats.norm)
+fig = plt.figure(figsize=(8,6))
+res = stats.probplot(df_train1['Hillshade_Noon'],plot=plt)",6
+"# using scaler
+scaler = StandardScaler()
+scaler.fit(scaled_feat)
+scaled_feat = scaler.transform(scaled_feat)
+
+scaled_feat = pd.DataFrame(scaled_feat, columns=cont_vars)
+scaled_feat.head()",7
+"#DATA preporcessing
+
+#standardizing
+std_scale = preprocessing.StandardScaler().fit(train)
+train_std = std_scale.transform(train)
+test_std = std_scale.transform(test)
+
+
+# #PCA
+# pca_std = PCA(n_components=10).fit(train_std)
+# train_stdwPCA = pca_std.transform(train_std)
+# test_stdwPCA = pca_std.transform(test_std)
+
+#normalize
+train_normalized = preprocessing.normalize(train_std, norm='l2')
+test_normalized = preprocessing.normalize(test_std, norm='l2')
+
+
+",7

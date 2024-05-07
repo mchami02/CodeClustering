@@ -1,0 +1,1 @@
+facet = sns.FacetGrid(train, hue = "interest_level", aspect=4)<br>facet.map(sns.kdeplot, \'price\', shade=True)<br>facet.set(xlim=(0,10000))<br>facet.add_legend()<br>plt.show()

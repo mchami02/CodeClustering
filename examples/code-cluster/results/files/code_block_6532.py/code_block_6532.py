@@ -1,0 +1,1 @@
+pca = PCA(n_components=10)<br><br>pca.fit(features)<br>principalComponents = pca.transform(features)<br>test_principalComponenta = pca.transform(sfeatures)<br>print(principalComponents.shape, "\<br>", test_principalComponenta.shape)

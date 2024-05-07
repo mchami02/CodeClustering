@@ -1,0 +1,2 @@
+rf1 = RandomForestRegressor(n_estimators = 200,max_depth=80,min_impurity_decrease = 0.001).fit(df_train_x,df_cas_train_y)
+rf2 = RandomForestRegressor(n_estimators = 150,max_depth=60,min_impurity_decrease = 0.0).fit(df_train_x,df_reg_train_y)

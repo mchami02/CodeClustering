@@ -3,6 +3,7 @@
   "compilerOptions": {
     "noImplicitAny": false,
     "strict": false,
+    "module": "commonjs",
     "paths": {
       "sigma": ["../src/"],
       "sigma/types": ["../src/types"],

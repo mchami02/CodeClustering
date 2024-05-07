@@ -26,6 +26,18 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.ttf$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }
+        ]
+      },
+      {
         test: /\.glsl$/,
         exclude: /node_modules/,
         loader: "raw-loader",

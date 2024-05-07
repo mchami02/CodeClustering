@@ -1,0 +1,1 @@
+def rooms_pop(row):<br>    row['rooms_pop'] = row['total_rooms'] / row['population'] <br>    return row<br>traindata = traindata.apply(rooms_pop, axis=1)<br>traindata = traindata.drop(['population'], axis=1)<br>plt.figure(figsize=(6,6))<br>plt.title('Matriz de correlao')<br>sns.heatmap(traindata.corr(), annot=True, linewidths=0.1)

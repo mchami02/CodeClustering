@@ -18,23 +18,28 @@ import Graph from "graphology";
 import circular from "graphology-layout/circular";
 import forceAtlas2 from "graphology-layout-forceatlas2";
 import { cropToLargestConnectedComponent } from "graphology-components";
+import { MouseCoords } from "sigma/types";
+import {editor} from 'monaco-editor';
+// import loader from '@monaco-editor/loader';
 
 const RED = "#FA4F40";
 const BLUE = "#727EE0";
 
 // 1. Load CSV file:
-Papa.parse<{ CodeID: string; IT: number; Distance: number }>("./clustering_data.csv", {
+Papa.parse<{ Code_Block: string; Cluster: number }>("./code_clusters.csv", {
   download: true,
   header: true,
   delimiter: ",",
   complete: (results) => {
     const graph: Graph = new Graph();
+    const logsDOM = document.getElementById("sigma-logs") as HTMLElement;
+
 
     // 2. Build the bipartite graph:
     results.data.forEach((line) => {
-      const CodeType = line.CodeID;
-      const IT = line.IT;
-      const Distance = line.Distance;
+      const CodeType = line.Code_Block;
+      const IT = line.Cluster;
+      // const Distance = line.Distance;
 
       // Create the institution node:
       if (!graph.hasNode(IT)) {
@@ -48,11 +53,11 @@ Papa.parse<{ CodeID: string; IT: number; Distance: number }>("./clustering_data.
 
       // Extract subjects list:
       const subject = CodeType;
-      console.log(subject);
+      // console.log(subject);
       // For each subject, create the node if it does not exist yet:
-      graph.addNode(CodeType, { nodeType: "Code", label: CodeType, color: BLUE, size: 4 });
+      graph.addNode(CodeType, { nodeType: "Code", label: subject, color: BLUE, size: 4 });
       // console.log(Distance);
-      graph.addEdge(IT, subject, {size: Distance});
+      graph.addEdge(IT, subject, {size: 1});
 
     });
 
@@ -89,6 +94,36 @@ Papa.parse<{ CodeID: string; IT: number; Distance: number }>("./clustering_data.
 
     // 8. Finally, draw the graph using sigma:
     const container = document.getElementById("sigma-container") as HTMLElement;
-    new Sigma(graph, container);
-  },
+    // const s = new Sigma(graph, container);
+    // s.bind('clickNode', function(e) {
+    //   console.log(e.data.node.label)
+    // })
+
+    const monaco_editor = editor.create(document.getElementById("container"), {
+      value: "print('Hello, world!')",
+      language: "python",
+      readOnly: true
+    });
+
+    // logsDOM.appendChild(document.createElement("div"));
+    function logEvent(event: string, item: string | MouseCoords): void {
+      const label = graph.getNodeAttribute(item, "label");
+      monaco_editor.setValue(label)
+      // div.innerHTML = `<span>${message}</span>`;
+      // // logsDOM.appendChild(div);
+      // logsDOM.replaceChild(div, logsDOM.firstChild);
+      // logsDOM.scrollTo({ top: logsDOM.scrollHeight });
+  
+    }
+
+    const renderer = new Sigma(graph, container)
+
+    const nodeEvents = [
+      "clickNode",
+    ] as const;
+    
+    nodeEvents.forEach((eventType) => renderer.on(eventType, ({ node }) => logEvent(eventType, node)));
+
+
+  },  
 });

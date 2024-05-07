@@ -7,7 +7,8 @@
   "scripts": {
     "build": "npm run clean && ./build.js build",
     "clean": "rimraf build",
-    "start": "kotatsu serve $npm_config_example/index.ts --index $npm_config_example/index.html --public / $npm_config_example/public"
+    "start": "kotatsu serve $npm_config_example/index.ts --index $npm_config_example/index.html --public / $npm_config_example/public",
+    "gh-pages": "gh-pages -d build"
   },
   "kotatsu": {
     "config": "webpack.config.js"
@@ -27,6 +28,7 @@
     "graphology-layout-forceatlas2": "^0.8.1",
     "graphology-types": "^0.24.5",
     "iwanthue": "^1.5.1",
+    "monaco-editor": "^0.48.0",
     "papaparse": "^5.3.1",
     "seedrandom": "^3.0.5",
     "uuid": "^8.3.2"
