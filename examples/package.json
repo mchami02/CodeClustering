@@ -8,11 +8,7 @@
     "build": "npm run clean && ./build.js build",
     "clean": "rimraf build",
     "start": "kotatsu serve $npm_config_example/index.ts --index $npm_config_example/index.html --public / $npm_config_example/public",
-<<<<<<< HEAD
-    "gh-pages": "gh-pages -d build"
-=======
     "deploy": "gh-pages -d build"
->>>>>>> 6e44b98651aa74f91d1a61210ce1c3cada38764a
   },
   "kotatsu": {
     "config": "webpack.config.js"
