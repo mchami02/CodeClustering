@@ -25,3 +25,17 @@ npm start --example=code-cluster
 ```
 
 The website will be hosted on [http://localhost:3000]
+
+### Deployment
+
+To deploy the interface as a github website, go to the examples folder and run :
+
+```bash
+npm run build
+```
+
+```bash
+npm run deploy
+```
+
+Make sure you have all the packages installed.
