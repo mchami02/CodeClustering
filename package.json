@@ -2,11 +2,11 @@
   "name": "sigma",
   "version": "2.4.0",
   "description": "A JavaScript library aimed at visualizing graphs of thousands of nodes and edges.",
-  "homepage": "https://www.sigmajs.org",
+  "homepage": "http://mchamieth.github.io/SigmaCluster",
   "bugs": "http://github.com/jacomyal/sigma.js/issues",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --progress && webpack --progress --mode production",
+    "build": "webpack --progress --mode production",
     "clean": "rimraf $npm_package_config_clean",
     "transpile": "tsc -p ./tsconfig.transpile.json -d && replace '\\.glsl' '.glsl.js' rendering -r && webpack --config ./webpack.programs.config.js",
     "lint": "eslint $npm_package_config_folders --ext .ts",
@@ -28,7 +28,8 @@
     "website:prepare": "rm -Rf website/demo && npm run demo:prepare",
     "website:build": "npm run demo:build && cp -R demo/build website/demo && npm run examples:build && cp -R examples/build website/examples && npm run doc:build",
     "website:all": "npm run website:prepare && npm run website:build",
-    "website:watch": "cd website && npx reload"
+    "website:watch": "cd website && npx reload",
+    "deploy": "gh-pages -d build"
   },
   "config": {
     "clean": "build core rendering utils index.js index.d.ts index-bundle.js index-bundle.d.ts settings.js settings.d.ts sigma.js sigma.d.ts types.js types.d.ts",
@@ -76,6 +77,7 @@
     "chai": "^4.3.4",
     "eslint": "^8.5.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^6.1.1",
     "glob": "^7.2.0",
     "graphology": "^0.23.2",
     "graphology-generators": "^0.11.2",
