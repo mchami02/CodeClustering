@@ -35,3 +35,4 @@ demo/public/data.xlsx
 *.xlsx
 *.xlsx
 *.json
+.env
