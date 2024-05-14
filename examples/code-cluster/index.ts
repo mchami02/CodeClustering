@@ -26,7 +26,7 @@ const RED = "#FA4F40";
 const BLUE = "#727EE0";
 
 // 1. Load CSV file:
-Papa.parse<{ Code_Block: string; Cluster: number }>("./code_clusters_9999.csv", {
+Papa.parse<{ Code_Block: string; Cluster: number; Summary : string }>("./code_clusters_9999.csv", {
   download: true,
   header: true,
   delimiter: ",",
@@ -38,16 +38,17 @@ Papa.parse<{ Code_Block: string; Cluster: number }>("./code_clusters_9999.csv", 
     // 2. Build the bipartite graph:
     results.data.forEach((line) => {
       const CodeType = line.Code_Block;
-      const IT = line.Cluster;
+      const IT = line.Summary;
       // const Distance = line.Distance;
 
       // Create the institution node:
       if (!graph.hasNode(IT)) {
         graph.addNode(IT, {
           nodeType: "Implementation",
-          label: IT,
+          // label: "",
           color: RED,
-          size: 10
+          size: 10,
+          summary : IT
         });
       }
 
@@ -55,7 +56,7 @@ Papa.parse<{ Code_Block: string; Cluster: number }>("./code_clusters_9999.csv", 
       const subject = CodeType;
       // console.log(subject);
       // For each subject, create the node if it does not exist yet:
-      graph.addNode(CodeType, { nodeType: "Code", label: subject, color: BLUE, size: 4 });
+      graph.addNode(CodeType, { nodeType: "Code", summary: subject, color: BLUE, size: 4 });
       // console.log(Distance);
       graph.addEdge(IT, subject, {size: 1});
 
@@ -107,7 +108,7 @@ Papa.parse<{ Code_Block: string; Cluster: number }>("./code_clusters_9999.csv", 
 
     // logsDOM.appendChild(document.createElement("div"));
     function logEvent(event: string, item: string | MouseCoords): void {
-      const label = graph.getNodeAttribute(item, "label");
+      const label = graph.getNodeAttribute(item, "summary");
       monaco_editor.setValue(label)
       // div.innerHTML = `<span>${message}</span>`;
       // // logsDOM.appendChild(div);
