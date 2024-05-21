@@ -1,16 +1,18 @@
 import transformers
 import torch
+from transformers import AutoTokenizer, AutoModelForCausalLM
 
 access_token = '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'
 model_id = "meta-llama/Meta-Llama-3-8B-Instruct"
 
-pipeline = transformers.pipeline(
-    "text-generation",
-    model=model_id,
-    model_kwargs={"torch_dtype": torch.bfloat16},
+tokenizer = AutoTokenizer.from_pretrained(model_id)
+model = AutoModelForCausalLM.from_pretrained(
+    model_id,
+    torch_dtype=torch.bfloat16,
     device_map="auto",
-    token=access_token,
+    token=access_token
 )
+<<<<<<< HEAD
 
 messages = [
     {"role": "system", "content": "You are an advanced AI tasked with summarizing code clusters. Each summary should be concise, direct, and formatted as one sentence per point, focusing on core functionalities and common patterns."},
@@ -38,3 +40,7 @@ outputs = pipeline(
 )
 
 print(outputs[0]["generated_text"][len(prompt):])
+=======
+pipeline = transformers.pipeline("text-generation", model=model_id, model_kwargs={"torch_dtype": torch.bfloat16}, device_map="auto", token=access_token)
+pipeline("Hey how are you doing today?")
+>>>>>>> 1db1331eb6c63948d51607eb2fa5861d03b74493
