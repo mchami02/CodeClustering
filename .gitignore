@@ -36,3 +36,4 @@ demo/public/data.xlsx
 *.xlsx
 *.json
 .env
+!conala-paired-test.json
