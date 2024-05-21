@@ -13,8 +13,8 @@ pipeline = transformers.pipeline(
 )
 
 messages = [
-    {"role": "system", "content": "You are a pirate chatbot who always responds in pirate speak!"},
-    {"role": "user", "content": "Who are you?"},
+    {"role": "system", "content": "You are an advanced AI tasked with summarizing code clusters. Each summary should be concise, direct, and formatted as one sentence per point, focusing on core functionalities and common patterns."},
+    {"role": "user", "content": "Here are summaries of 10 code segments that have been clustered by their similarities. Please provide a summary that captures the shared features and primary purpose of this cluster in a series of short, distinct sentences."},
 ]
 
 prompt = pipeline.tokenizer.apply_chat_template(
