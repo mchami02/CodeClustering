@@ -37,3 +37,4 @@ demo/public/data.xlsx
 *.json
 .env
 !conala-paired-test.json
+examples/envAiCenter

@@ -26,7 +26,9 @@ const RED = "#FA4F40";
 const BLUE = "#727EE0";
 
 // 1. Load CSV file:
-Papa.parse<{ Code_Block: string; Cluster: number; Summary : string }>("./code_clusters_9999.csv", {
+// Papa.parse<{ id : string, Code_Block: string; Cluster: number; Summary : string }>("./code_clusters_99999.csv", {
+Papa.parse<{ id: number, Code_Block: string; Cluster: number}>("./code_clusters_99999.csv", {
+
   download: true,
   header: true,
   delimiter: ",",
@@ -37,8 +39,14 @@ Papa.parse<{ Code_Block: string; Cluster: number; Summary : string }>("./code_cl
 
     // 2. Build the bipartite graph:
     results.data.forEach((line) => {
+      const id = line.id;
       const CodeType = line.Code_Block;
-      const IT = line.Summary;
+      const IT = line.Cluster;
+      console.log(id);
+      console.log(CodeType);
+      console.log(IT);
+      console.log(graph);
+      // const IT = line.Summary;
       // const Distance = line.Distance;
 
       // Create the institution node:
