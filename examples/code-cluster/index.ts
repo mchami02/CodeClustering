@@ -27,7 +27,7 @@ const BLUE = "#727EE0";
 
 // 1. Load CSV file:
 // Papa.parse<{ id : string, Code_Block: string; Cluster: number; Summary : string }>("./code_clusters_99999.csv", {
-Papa.parse<{ id: number, Code_Block: string; Cluster: number}>("./code_clusters_99999.csv", {
+Papa.parse<{Code_Block: string; Cluster: number}>("./code_clusters_9999.csv", {
 
   download: true,
   header: true,
@@ -39,10 +39,10 @@ Papa.parse<{ id: number, Code_Block: string; Cluster: number}>("./code_clusters_
 
     // 2. Build the bipartite graph:
     results.data.forEach((line) => {
-      const id = line.id;
+      // const id = line.id;
       const CodeType = line.Code_Block;
       const IT = line.Cluster;
-      console.log(id);
+      // console.log(id);
       console.log(CodeType);
       console.log(IT);
       console.log(graph);
