@@ -7,17 +7,10 @@ plt.title('CC Model loss')
 plt.ylabel('Loss')
 plt.xlabel('Epoch')
 plt.legend(['Train', 'Test'], loc='upper left')
-plt.show()",0,"The code cluster consists of various visualizations using the matplotlib and seaborn libraries to plot training and validation loss values for different models, show trends in Fatalities and Confirmed Cases in different countries over time, and display Confirmed Cases in different provinces/states within countries. 
-
-1. Two models, ""CC Model"" and ""FT Model"", are trained and their training and validation loss values are plotted for visualization.
-2. Trends of Fatalities in Italy over time are plotted using seaborn.
-3. Trends of Confirmed Cases in the US over time are plotted using seaborn.
-4. Trends of Confirmed Cases in China over time are plotted using seaborn.
-5. Trends of Fatalities in China over time are plotted using seaborn.
-6. Confirmed Cases in US provinces/states are visualized using a bar plot.
-7. Confirmed Cases in China provinces/states are visualized using a bar plot.
-8. Confirmed Cases in Italy over time are visualized using seaborn.
-9. A Random"
+plt.show()",0,"- The code cluster primarily involves plotting training and validation loss values for different models using Matplotlib.
+- It also includes data visualization using Seaborn for different countries like Italy, US, and China, showcasing trends related to confirmed cases, fatalities, and provinces.
+- Various plot configurations such as figure size, line colors, axis labels, titles, and rotation settings are employed consistently.
+- The RandomForestRegressor model is utilized for prediction tasks, and performance metrics like the score are calculated."
 "# Plot training & validation loss values
 plt.figure(figsize=(8,5))
 plt.plot(history_ft.history['loss'])
@@ -26,17 +19,10 @@ plt.title('FT Model loss')
 plt.ylabel('Loss')
 plt.xlabel('Epoch')
 plt.legend(['Train', 'Test'], loc='upper left')
-plt.show()",0,"The code cluster consists of various visualizations using the matplotlib and seaborn libraries to plot training and validation loss values for different models, show trends in Fatalities and Confirmed Cases in different countries over time, and display Confirmed Cases in different provinces/states within countries. 
-
-1. Two models, ""CC Model"" and ""FT Model"", are trained and their training and validation loss values are plotted for visualization.
-2. Trends of Fatalities in Italy over time are plotted using seaborn.
-3. Trends of Confirmed Cases in the US over time are plotted using seaborn.
-4. Trends of Confirmed Cases in China over time are plotted using seaborn.
-5. Trends of Fatalities in China over time are plotted using seaborn.
-6. Confirmed Cases in US provinces/states are visualized using a bar plot.
-7. Confirmed Cases in China provinces/states are visualized using a bar plot.
-8. Confirmed Cases in Italy over time are visualized using seaborn.
-9. A Random"
+plt.show()",0,"- The code cluster primarily involves plotting training and validation loss values for different models using Matplotlib.
+- It also includes data visualization using Seaborn for different countries like Italy, US, and China, showcasing trends related to confirmed cases, fatalities, and provinces.
+- Various plot configurations such as figure size, line colors, axis labels, titles, and rotation settings are employed consistently.
+- The RandomForestRegressor model is utilized for prediction tasks, and performance metrics like the score are calculated."
 "italy = df_train[df_train['Country_Region'] == 'Italy']
 plt.figure(figsize=(20,10))
 sns.lineplot(x = 'Date' , y = 'Fatalities' , data = italy,color='orange')
@@ -44,17 +30,10 @@ plt.xticks(rotation = 90,size=12)
 plt.xlabel('Date',size=15)
 plt.ylabel('Fatalities',size=15)
 plt.title('Fatalities in Italy per Date',size=20)
-plt.show()",0,"The code cluster consists of various visualizations using the matplotlib and seaborn libraries to plot training and validation loss values for different models, show trends in Fatalities and Confirmed Cases in different countries over time, and display Confirmed Cases in different provinces/states within countries. 
-
-1. Two models, ""CC Model"" and ""FT Model"", are trained and their training and validation loss values are plotted for visualization.
-2. Trends of Fatalities in Italy over time are plotted using seaborn.
-3. Trends of Confirmed Cases in the US over time are plotted using seaborn.
-4. Trends of Confirmed Cases in China over time are plotted using seaborn.
-5. Trends of Fatalities in China over time are plotted using seaborn.
-6. Confirmed Cases in US provinces/states are visualized using a bar plot.
-7. Confirmed Cases in China provinces/states are visualized using a bar plot.
-8. Confirmed Cases in Italy over time are visualized using seaborn.
-9. A Random"
+plt.show()",0,"- The code cluster primarily involves plotting training and validation loss values for different models using Matplotlib.
+- It also includes data visualization using Seaborn for different countries like Italy, US, and China, showcasing trends related to confirmed cases, fatalities, and provinces.
+- Various plot configurations such as figure size, line colors, axis labels, titles, and rotation settings are employed consistently.
+- The RandomForestRegressor model is utilized for prediction tasks, and performance metrics like the score are calculated."
 "usa = df_train[df_train['Country_Region'] == 'US']
 plt.figure(figsize=(20,10))
 sns.lineplot(x = 'Date' , y = 'ConfirmedCases' , data = usa,color='g')
@@ -62,17 +41,10 @@ plt.xticks(rotation = 90,size=13)
 plt.xlabel('Date',size=15)
 plt.ylabel('Confirmed Cases',size=15)
 plt.title('Confirmed Cases in US per Date',size=20)
-plt.show()",0,"The code cluster consists of various visualizations using the matplotlib and seaborn libraries to plot training and validation loss values for different models, show trends in Fatalities and Confirmed Cases in different countries over time, and display Confirmed Cases in different provinces/states within countries. 
-
-1. Two models, ""CC Model"" and ""FT Model"", are trained and their training and validation loss values are plotted for visualization.
-2. Trends of Fatalities in Italy over time are plotted using seaborn.
-3. Trends of Confirmed Cases in the US over time are plotted using seaborn.
-4. Trends of Confirmed Cases in China over time are plotted using seaborn.
-5. Trends of Fatalities in China over time are plotted using seaborn.
-6. Confirmed Cases in US provinces/states are visualized using a bar plot.
-7. Confirmed Cases in China provinces/states are visualized using a bar plot.
-8. Confirmed Cases in Italy over time are visualized using seaborn.
-9. A Random"
+plt.show()",0,"- The code cluster primarily involves plotting training and validation loss values for different models using Matplotlib.
+- It also includes data visualization using Seaborn for different countries like Italy, US, and China, showcasing trends related to confirmed cases, fatalities, and provinces.
+- Various plot configurations such as figure size, line colors, axis labels, titles, and rotation settings are employed consistently.
+- The RandomForestRegressor model is utilized for prediction tasks, and performance metrics like the score are calculated."
 "china  = df_train[df_train['Country_Region'] == 'China']
 
 plt.figure(figsize=(20,10))
@@ -82,17 +54,10 @@ plt.xlabel('Date',size=15)
 plt.ylabel('Confirmed Cases',size=15)
 sns.set_context('paper')
 plt.title('Confirmed Cases in China per Date',size=20)
-plt.show()",0,"The code cluster consists of various visualizations using the matplotlib and seaborn libraries to plot training and validation loss values for different models, show trends in Fatalities and Confirmed Cases in different countries over time, and display Confirmed Cases in different provinces/states within countries. 
-
-1. Two models, ""CC Model"" and ""FT Model"", are trained and their training and validation loss values are plotted for visualization.
-2. Trends of Fatalities in Italy over time are plotted using seaborn.
-3. Trends of Confirmed Cases in the US over time are plotted using seaborn.
-4. Trends of Confirmed Cases in China over time are plotted using seaborn.
-5. Trends of Fatalities in China over time are plotted using seaborn.
-6. Confirmed Cases in US provinces/states are visualized using a bar plot.
-7. Confirmed Cases in China provinces/states are visualized using a bar plot.
-8. Confirmed Cases in Italy over time are visualized using seaborn.
-9. A Random"
+plt.show()",0,"- The code cluster primarily involves plotting training and validation loss values for different models using Matplotlib.
+- It also includes data visualization using Seaborn for different countries like Italy, US, and China, showcasing trends related to confirmed cases, fatalities, and provinces.
+- Various plot configurations such as figure size, line colors, axis labels, titles, and rotation settings are employed consistently.
+- The RandomForestRegressor model is utilized for prediction tasks, and performance metrics like the score are calculated."
 "china  = df_train[df_train['Country_Region'] == 'China']
 
 plt.figure(figsize=(20,10))
@@ -102,51 +67,30 @@ plt.xlabel('Date',size=15)
 plt.ylabel('Fatalities',size=15)
 sns.set_context('paper')
 plt.title('Fatalities in China per Date',size=20)
-plt.show()",0,"The code cluster consists of various visualizations using the matplotlib and seaborn libraries to plot training and validation loss values for different models, show trends in Fatalities and Confirmed Cases in different countries over time, and display Confirmed Cases in different provinces/states within countries. 
-
-1. Two models, ""CC Model"" and ""FT Model"", are trained and their training and validation loss values are plotted for visualization.
-2. Trends of Fatalities in Italy over time are plotted using seaborn.
-3. Trends of Confirmed Cases in the US over time are plotted using seaborn.
-4. Trends of Confirmed Cases in China over time are plotted using seaborn.
-5. Trends of Fatalities in China over time are plotted using seaborn.
-6. Confirmed Cases in US provinces/states are visualized using a bar plot.
-7. Confirmed Cases in China provinces/states are visualized using a bar plot.
-8. Confirmed Cases in Italy over time are visualized using seaborn.
-9. A Random"
+plt.show()",0,"- The code cluster primarily involves plotting training and validation loss values for different models using Matplotlib.
+- It also includes data visualization using Seaborn for different countries like Italy, US, and China, showcasing trends related to confirmed cases, fatalities, and provinces.
+- Various plot configurations such as figure size, line colors, axis labels, titles, and rotation settings are employed consistently.
+- The RandomForestRegressor model is utilized for prediction tasks, and performance metrics like the score are calculated."
 "plt.figure(figsize=(20,10))
 sns.barplot(x='Province_State',y='ConfirmedCases',data=usa,ci=None)
 plt.xticks(rotation = 90,size=13)
 plt.xlabel('Province_State',size=15)
 plt.ylabel('Confirmed Cases',size=15)
 plt.title('Confirmed Cases in US Province_State ',size=20)
-plt.show()",0,"The code cluster consists of various visualizations using the matplotlib and seaborn libraries to plot training and validation loss values for different models, show trends in Fatalities and Confirmed Cases in different countries over time, and display Confirmed Cases in different provinces/states within countries. 
-
-1. Two models, ""CC Model"" and ""FT Model"", are trained and their training and validation loss values are plotted for visualization.
-2. Trends of Fatalities in Italy over time are plotted using seaborn.
-3. Trends of Confirmed Cases in the US over time are plotted using seaborn.
-4. Trends of Confirmed Cases in China over time are plotted using seaborn.
-5. Trends of Fatalities in China over time are plotted using seaborn.
-6. Confirmed Cases in US provinces/states are visualized using a bar plot.
-7. Confirmed Cases in China provinces/states are visualized using a bar plot.
-8. Confirmed Cases in Italy over time are visualized using seaborn.
-9. A Random"
+plt.show()",0,"- The code cluster primarily involves plotting training and validation loss values for different models using Matplotlib.
+- It also includes data visualization using Seaborn for different countries like Italy, US, and China, showcasing trends related to confirmed cases, fatalities, and provinces.
+- Various plot configurations such as figure size, line colors, axis labels, titles, and rotation settings are employed consistently.
+- The RandomForestRegressor model is utilized for prediction tasks, and performance metrics like the score are calculated."
 "plt.figure(figsize=(20,10))
 sns.barplot(x='Province_State',y='ConfirmedCases',data=china)
 plt.xticks(rotation = 90,size=13)
 plt.title('Confirmed Cases in China Province_State',size=20)
 plt.ylabel('Confirmed Cases',size=15)
 plt.xlabel('Province_State',size=15)
-plt.show()",0,"The code cluster consists of various visualizations using the matplotlib and seaborn libraries to plot training and validation loss values for different models, show trends in Fatalities and Confirmed Cases in different countries over time, and display Confirmed Cases in different provinces/states within countries. 
-
-1. Two models, ""CC Model"" and ""FT Model"", are trained and their training and validation loss values are plotted for visualization.
-2. Trends of Fatalities in Italy over time are plotted using seaborn.
-3. Trends of Confirmed Cases in the US over time are plotted using seaborn.
-4. Trends of Confirmed Cases in China over time are plotted using seaborn.
-5. Trends of Fatalities in China over time are plotted using seaborn.
-6. Confirmed Cases in US provinces/states are visualized using a bar plot.
-7. Confirmed Cases in China provinces/states are visualized using a bar plot.
-8. Confirmed Cases in Italy over time are visualized using seaborn.
-9. A Random"
+plt.show()",0,"- The code cluster primarily involves plotting training and validation loss values for different models using Matplotlib.
+- It also includes data visualization using Seaborn for different countries like Italy, US, and China, showcasing trends related to confirmed cases, fatalities, and provinces.
+- Various plot configurations such as figure size, line colors, axis labels, titles, and rotation settings are employed consistently.
+- The RandomForestRegressor model is utilized for prediction tasks, and performance metrics like the score are calculated."
 "italy = df_train[df_train['Country_Region'] == 'Italy']
 plt.figure(figsize=(20,10))
 sns.lineplot(x = 'Date' , y = 'ConfirmedCases' , data = italy)
@@ -154,17 +98,10 @@ plt.xticks(rotation = 90,size=12)
 plt.xlabel('Date',size=15)
 plt.ylabel('Confirmed Cases',size=15)
 plt.title('Confirmed Cases per date in Italy',size=20)
-plt.show()",0,"The code cluster consists of various visualizations using the matplotlib and seaborn libraries to plot training and validation loss values for different models, show trends in Fatalities and Confirmed Cases in different countries over time, and display Confirmed Cases in different provinces/states within countries. 
-
-1. Two models, ""CC Model"" and ""FT Model"", are trained and their training and validation loss values are plotted for visualization.
-2. Trends of Fatalities in Italy over time are plotted using seaborn.
-3. Trends of Confirmed Cases in the US over time are plotted using seaborn.
-4. Trends of Confirmed Cases in China over time are plotted using seaborn.
-5. Trends of Fatalities in China over time are plotted using seaborn.
-6. Confirmed Cases in US provinces/states are visualized using a bar plot.
-7. Confirmed Cases in China provinces/states are visualized using a bar plot.
-8. Confirmed Cases in Italy over time are visualized using seaborn.
-9. A Random"
+plt.show()",0,"- The code cluster primarily involves plotting training and validation loss values for different models using Matplotlib.
+- It also includes data visualization using Seaborn for different countries like Italy, US, and China, showcasing trends related to confirmed cases, fatalities, and provinces.
+- Various plot configurations such as figure size, line colors, axis labels, titles, and rotation settings are employed consistently.
+- The RandomForestRegressor model is utilized for prediction tasks, and performance metrics like the score are calculated."
 "from sklearn import linear_model
 from sklearn.ensemble import RandomForestRegressor
 
@@ -173,33 +110,19 @@ cls.fit(xTrain, yTrain)
 pred = cls.predict(xTest)
 pred = numpy.exp(pred)
 closs = cls.score(xTrain, yTrain)
-closs",0,"The code cluster consists of various visualizations using the matplotlib and seaborn libraries to plot training and validation loss values for different models, show trends in Fatalities and Confirmed Cases in different countries over time, and display Confirmed Cases in different provinces/states within countries. 
-
-1. Two models, ""CC Model"" and ""FT Model"", are trained and their training and validation loss values are plotted for visualization.
-2. Trends of Fatalities in Italy over time are plotted using seaborn.
-3. Trends of Confirmed Cases in the US over time are plotted using seaborn.
-4. Trends of Confirmed Cases in China over time are plotted using seaborn.
-5. Trends of Fatalities in China over time are plotted using seaborn.
-6. Confirmed Cases in US provinces/states are visualized using a bar plot.
-7. Confirmed Cases in China provinces/states are visualized using a bar plot.
-8. Confirmed Cases in Italy over time are visualized using seaborn.
-9. A Random"
+closs",0,"- The code cluster primarily involves plotting training and validation loss values for different models using Matplotlib.
+- It also includes data visualization using Seaborn for different countries like Italy, US, and China, showcasing trends related to confirmed cases, fatalities, and provinces.
+- Various plot configurations such as figure size, line colors, axis labels, titles, and rotation settings are employed consistently.
+- The RandomForestRegressor model is utilized for prediction tasks, and performance metrics like the score are calculated."
 "idx = np.random.RandomState(seed=42).permutation(train_X_cc.index)
 train_X_cc = train_X_cc.reindex(idx)
 train_y_cc = train_y_cc.reindex(idx)
 train_X_ft = train_X_ft.reindex(idx)
 train_y_ft = train_y_ft.reindex(idx)
-# train_y_cc.tail()",0,"The code cluster consists of various visualizations using the matplotlib and seaborn libraries to plot training and validation loss values for different models, show trends in Fatalities and Confirmed Cases in different countries over time, and display Confirmed Cases in different provinces/states within countries. 
-
-1. Two models, ""CC Model"" and ""FT Model"", are trained and their training and validation loss values are plotted for visualization.
-2. Trends of Fatalities in Italy over time are plotted using seaborn.
-3. Trends of Confirmed Cases in the US over time are plotted using seaborn.
-4. Trends of Confirmed Cases in China over time are plotted using seaborn.
-5. Trends of Fatalities in China over time are plotted using seaborn.
-6. Confirmed Cases in US provinces/states are visualized using a bar plot.
-7. Confirmed Cases in China provinces/states are visualized using a bar plot.
-8. Confirmed Cases in Italy over time are visualized using seaborn.
-9. A Random"
+# train_y_cc.tail()",0,"- The code cluster primarily involves plotting training and validation loss values for different models using Matplotlib.
+- It also includes data visualization using Seaborn for different countries like Italy, US, and China, showcasing trends related to confirmed cases, fatalities, and provinces.
+- Various plot configurations such as figure size, line colors, axis labels, titles, and rotation settings are employed consistently.
+- The RandomForestRegressor model is utilized for prediction tasks, and performance metrics like the score are calculated."
 "# if choose to not apply normalization, however it generates NaN in output...
 X_train_cc = train_X_cc.to_numpy()  
 X_val_cc = val_X_cc.to_numpy()
@@ -209,17 +132,10 @@ X_val_ft = val_X_ft.to_numpy()
 y_train_cc = train_y_cc.to_numpy()
 y_val_cc = val_y_cc.to_numpy()
 y_train_ft = train_y_ft.to_numpy()
-y_val_ft = val_y_ft.to_numpy()",0,"The code cluster consists of various visualizations using the matplotlib and seaborn libraries to plot training and validation loss values for different models, show trends in Fatalities and Confirmed Cases in different countries over time, and display Confirmed Cases in different provinces/states within countries. 
-
-1. Two models, ""CC Model"" and ""FT Model"", are trained and their training and validation loss values are plotted for visualization.
-2. Trends of Fatalities in Italy over time are plotted using seaborn.
-3. Trends of Confirmed Cases in the US over time are plotted using seaborn.
-4. Trends of Confirmed Cases in China over time are plotted using seaborn.
-5. Trends of Fatalities in China over time are plotted using seaborn.
-6. Confirmed Cases in US provinces/states are visualized using a bar plot.
-7. Confirmed Cases in China provinces/states are visualized using a bar plot.
-8. Confirmed Cases in Italy over time are visualized using seaborn.
-9. A Random"
+y_val_ft = val_y_ft.to_numpy()",0,"- The code cluster primarily involves plotting training and validation loss values for different models using Matplotlib.
+- It also includes data visualization using Seaborn for different countries like Italy, US, and China, showcasing trends related to confirmed cases, fatalities, and provinces.
+- Various plot configurations such as figure size, line colors, axis labels, titles, and rotation settings are employed consistently.
+- The RandomForestRegressor model is utilized for prediction tasks, and performance metrics like the score are calculated."
 "# Plots
 plt.figure(figsize=(12,6))
 plt.plot(italy_30)
@@ -231,17 +147,10 @@ plt.title(""COVID-19 infections from the first confirmed case"", size=15)
 plt.xlabel(""Days"", size=13)
 plt.ylabel(""Infected cases"", size=13)
 plt.ylim(0, 60000)
-plt.show()'",0,"The code cluster consists of various visualizations using the matplotlib and seaborn libraries to plot training and validation loss values for different models, show trends in Fatalities and Confirmed Cases in different countries over time, and display Confirmed Cases in different provinces/states within countries. 
-
-1. Two models, ""CC Model"" and ""FT Model"", are trained and their training and validation loss values are plotted for visualization.
-2. Trends of Fatalities in Italy over time are plotted using seaborn.
-3. Trends of Confirmed Cases in the US over time are plotted using seaborn.
-4. Trends of Confirmed Cases in China over time are plotted using seaborn.
-5. Trends of Fatalities in China over time are plotted using seaborn.
-6. Confirmed Cases in US provinces/states are visualized using a bar plot.
-7. Confirmed Cases in China provinces/states are visualized using a bar plot.
-8. Confirmed Cases in Italy over time are visualized using seaborn.
-9. A Random"
+plt.show()'",0,"- The code cluster primarily involves plotting training and validation loss values for different models using Matplotlib.
+- It also includes data visualization using Seaborn for different countries like Italy, US, and China, showcasing trends related to confirmed cases, fatalities, and provinces.
+- Various plot configurations such as figure size, line colors, axis labels, titles, and rotation settings are employed consistently.
+- The RandomForestRegressor model is utilized for prediction tasks, and performance metrics like the score are calculated."
 "#Regression on everything
 from sklearn.ensemble import RandomForestRegressor
 import seaborn as sns
@@ -254,34 +163,20 @@ yTrain = Train_data['revenue'].apply(numpy.log)
 Train_data = Train_data.drop([""revenue""],1)
 xTrain = pd.DataFrame(Train_data)
 xTest = pd.DataFrame(Test_data)
-'",0,"The code cluster consists of various visualizations using the matplotlib and seaborn libraries to plot training and validation loss values for different models, show trends in Fatalities and Confirmed Cases in different countries over time, and display Confirmed Cases in different provinces/states within countries. 
-
-1. Two models, ""CC Model"" and ""FT Model"", are trained and their training and validation loss values are plotted for visualization.
-2. Trends of Fatalities in Italy over time are plotted using seaborn.
-3. Trends of Confirmed Cases in the US over time are plotted using seaborn.
-4. Trends of Confirmed Cases in China over time are plotted using seaborn.
-5. Trends of Fatalities in China over time are plotted using seaborn.
-6. Confirmed Cases in US provinces/states are visualized using a bar plot.
-7. Confirmed Cases in China provinces/states are visualized using a bar plot.
-8. Confirmed Cases in Italy over time are visualized using seaborn.
-9. A Random"
+'",0,"- The code cluster primarily involves plotting training and validation loss values for different models using Matplotlib.
+- It also includes data visualization using Seaborn for different countries like Italy, US, and China, showcasing trends related to confirmed cases, fatalities, and provinces.
+- Various plot configurations such as figure size, line colors, axis labels, titles, and rotation settings are employed consistently.
+- The RandomForestRegressor model is utilized for prediction tasks, and performance metrics like the score are calculated."
 "plt.figure(figsize=(20,10))
 sns.lineplot(x = 'Date' , y = 'Fatalities' , data = usa,color='purple')
 plt.title('Fatalities in US per Date',size=20)
 plt.xticks(rotation = 90,size=13)
 plt.xlabel('Date',size=15)
 plt.ylabel('Fatalities',size=15)
-plt.show()",0,"The code cluster consists of various visualizations using the matplotlib and seaborn libraries to plot training and validation loss values for different models, show trends in Fatalities and Confirmed Cases in different countries over time, and display Confirmed Cases in different provinces/states within countries. 
-
-1. Two models, ""CC Model"" and ""FT Model"", are trained and their training and validation loss values are plotted for visualization.
-2. Trends of Fatalities in Italy over time are plotted using seaborn.
-3. Trends of Confirmed Cases in the US over time are plotted using seaborn.
-4. Trends of Confirmed Cases in China over time are plotted using seaborn.
-5. Trends of Fatalities in China over time are plotted using seaborn.
-6. Confirmed Cases in US provinces/states are visualized using a bar plot.
-7. Confirmed Cases in China provinces/states are visualized using a bar plot.
-8. Confirmed Cases in Italy over time are visualized using seaborn.
-9. A Random"
+plt.show()",0,"- The code cluster primarily involves plotting training and validation loss values for different models using Matplotlib.
+- It also includes data visualization using Seaborn for different countries like Italy, US, and China, showcasing trends related to confirmed cases, fatalities, and provinces.
+- Various plot configurations such as figure size, line colors, axis labels, titles, and rotation settings are employed consistently.
+- The RandomForestRegressor model is utilized for prediction tasks, and performance metrics like the score are calculated."
 "cityPerc = trainData[[""City Group"", ""revenue""]].groupby(['City Group'],as_index=False).mean()
 #sns.barplot(x='City Group', y='revenue', data=cityPerc)
 
@@ -292,17 +187,10 @@ citygroupDummyTest = pd.get_dummies(testData['City Group'])
 testData = testData.join(citygroupDummyTest)
 
 trainData = trainData.drop('City Group', axis=1)
-testData = testData.drop('City Group', axis=1)'",0,"The code cluster consists of various visualizations using the matplotlib and seaborn libraries to plot training and validation loss values for different models, show trends in Fatalities and Confirmed Cases in different countries over time, and display Confirmed Cases in different provinces/states within countries. 
-
-1. Two models, ""CC Model"" and ""FT Model"", are trained and their training and validation loss values are plotted for visualization.
-2. Trends of Fatalities in Italy over time are plotted using seaborn.
-3. Trends of Confirmed Cases in the US over time are plotted using seaborn.
-4. Trends of Confirmed Cases in China over time are plotted using seaborn.
-5. Trends of Fatalities in China over time are plotted using seaborn.
-6. Confirmed Cases in US provinces/states are visualized using a bar plot.
-7. Confirmed Cases in China provinces/states are visualized using a bar plot.
-8. Confirmed Cases in Italy over time are visualized using seaborn.
-9. A Random"
+testData = testData.drop('City Group', axis=1)'",0,"- The code cluster primarily involves plotting training and validation loss values for different models using Matplotlib.
+- It also includes data visualization using Seaborn for different countries like Italy, US, and China, showcasing trends related to confirmed cases, fatalities, and provinces.
+- Various plot configurations such as figure size, line colors, axis labels, titles, and rotation settings are employed consistently.
+- The RandomForestRegressor model is utilized for prediction tasks, and performance metrics like the score are calculated."
 "plt.figure(figsize=(40,40))
 temp_df= df_train[df_train['ConfirmedCases']>5000]
 sns.barplot(y = temp_df['Country_Region'] , x = temp_df['ConfirmedCases']>10000)
@@ -310,17 +198,10 @@ sns.set_context('paper')
 plt.ylabel(""Country_Region"",fontsize=30)
 plt.xlabel(""Counts"",fontsize=30)
 plt.title(""Counts of Countries affected by the pandemic that have confirmed cases > 5000"",fontsize=30)
-plt.xticks(rotation = 90)'",0,"The code cluster consists of various visualizations using the matplotlib and seaborn libraries to plot training and validation loss values for different models, show trends in Fatalities and Confirmed Cases in different countries over time, and display Confirmed Cases in different provinces/states within countries. 
-
-1. Two models, ""CC Model"" and ""FT Model"", are trained and their training and validation loss values are plotted for visualization.
-2. Trends of Fatalities in Italy over time are plotted using seaborn.
-3. Trends of Confirmed Cases in the US over time are plotted using seaborn.
-4. Trends of Confirmed Cases in China over time are plotted using seaborn.
-5. Trends of Fatalities in China over time are plotted using seaborn.
-6. Confirmed Cases in US provinces/states are visualized using a bar plot.
-7. Confirmed Cases in China provinces/states are visualized using a bar plot.
-8. Confirmed Cases in Italy over time are visualized using seaborn.
-9. A Random"
+plt.xticks(rotation = 90)'",0,"- The code cluster primarily involves plotting training and validation loss values for different models using Matplotlib.
+- It also includes data visualization using Seaborn for different countries like Italy, US, and China, showcasing trends related to confirmed cases, fatalities, and provinces.
+- Various plot configurations such as figure size, line colors, axis labels, titles, and rotation settings are employed consistently.
+- The RandomForestRegressor model is utilized for prediction tasks, and performance metrics like the score are calculated."
 "# plot global cases and fatalities temporally
 global_cases = train_data.groupby(['Date'])[['ConfirmedCases','Fatalities']].sum()
 
@@ -330,17 +211,10 @@ _=ax.plot(global_cases['Fatalities'],label='Deaths',c='r')
 _=ax.xaxis.set_tick_params(rotation=15)
 _=sns.despine()
 _=ax.legend(loc=0)
-_=ax.set(title=('Global cumulative cases and deaths'))",0,"The code cluster consists of various visualizations using the matplotlib and seaborn libraries to plot training and validation loss values for different models, show trends in Fatalities and Confirmed Cases in different countries over time, and display Confirmed Cases in different provinces/states within countries. 
-
-1. Two models, ""CC Model"" and ""FT Model"", are trained and their training and validation loss values are plotted for visualization.
-2. Trends of Fatalities in Italy over time are plotted using seaborn.
-3. Trends of Confirmed Cases in the US over time are plotted using seaborn.
-4. Trends of Confirmed Cases in China over time are plotted using seaborn.
-5. Trends of Fatalities in China over time are plotted using seaborn.
-6. Confirmed Cases in US provinces/states are visualized using a bar plot.
-7. Confirmed Cases in China provinces/states are visualized using a bar plot.
-8. Confirmed Cases in Italy over time are visualized using seaborn.
-9. A Random"
+_=ax.set(title=('Global cumulative cases and deaths'))",0,"- The code cluster primarily involves plotting training and validation loss values for different models using Matplotlib.
+- It also includes data visualization using Seaborn for different countries like Italy, US, and China, showcasing trends related to confirmed cases, fatalities, and provinces.
+- Various plot configurations such as figure size, line colors, axis labels, titles, and rotation settings are employed consistently.
+- The RandomForestRegressor model is utilized for prediction tasks, and performance metrics like the score are calculated."
 "fig,ax = plt.subplots(figsize=(8,5))
 for i in highest_cases_countries.index:
     _=ax.plot(regions[regions['Country_Region']==i]['Date'],
@@ -348,35 +222,20 @@ for i in highest_cases_countries.index:
     _=ax.legend()
     _=ax.xaxis.set_tick_params(rotation=15)
     _=sns.despine()
-    _=ax.set(title='Regions with highest cases')",0,"The code cluster consists of various visualizations using the matplotlib and seaborn libraries to plot training and validation loss values for different models, show trends in Fatalities and Confirmed Cases in different countries over time, and display Confirmed Cases in different provinces/states within countries. 
-
-1. Two models, ""CC Model"" and ""FT Model"", are trained and their training and validation loss values are plotted for visualization.
-2. Trends of Fatalities in Italy over time are plotted using seaborn.
-3. Trends of Confirmed Cases in the US over time are plotted using seaborn.
-4. Trends of Confirmed Cases in China over time are plotted using seaborn.
-5. Trends of Fatalities in China over time are plotted using seaborn.
-6. Confirmed Cases in US provinces/states are visualized using a bar plot.
-7. Confirmed Cases in China provinces/states are visualized using a bar plot.
-8. Confirmed Cases in Italy over time are visualized using seaborn.
-9. A Random"
+    _=ax.set(title='Regions with highest cases')",0,"- The code cluster primarily involves plotting training and validation loss values for different models using Matplotlib.
+- It also includes data visualization using Seaborn for different countries like Italy, US, and China, showcasing trends related to confirmed cases, fatalities, and provinces.
+- Various plot configurations such as figure size, line colors, axis labels, titles, and rotation settings are employed consistently.
+- The RandomForestRegressor model is utilized for prediction tasks, and performance metrics like the score are calculated."
 "train_levels = Train_data.loc[(Train_data['City'].notnull())]
 City_counts = train_levels['City'].value_counts().sort_index().to_frame()
-City_counts",1,"The code cluster seems to be performing data manipulation and analysis on the ""Train_data"" dataframe. 
-1. The first part filters out rows where the 'City' column is not null and stores the result in ""train_levels"".
-2. It then calculates the count of unique values in the 'City' column, sorts them, and converts it to a dataframe called ""City_counts"".
-3. The next part filters out rows where the 'Type' column is not null and stores the result in ""train_levels"".
-4. It then calculates the count of unique values in the 'Type' column, sorts them, and converts it to a dataframe called ""label_counts"". 
-
-Overall, the code segment is analyzing and summarizing the distribution of data within the 'City' and 'Type' columns in the ""Train_data"" dataframe."
+City_counts",1,"- Filtering and extracting data from a DataFrame 'Train_data' based on non-null values in the 'City' and 'Type' columns.
+- Counting the occurrences of unique values in the 'City' and 'Type' columns after filtering.
+- Returning the tabulated counts of cities in 'City_counts' and types in 'label_counts'."
 "train_levels = Train_data.loc[(Train_data['Type'].notnull())]
 label_counts = train_levels['Type'].value_counts().sort_index().to_frame()
-label_counts",1,"The code cluster seems to be performing data manipulation and analysis on the ""Train_data"" dataframe. 
-1. The first part filters out rows where the 'City' column is not null and stores the result in ""train_levels"".
-2. It then calculates the count of unique values in the 'City' column, sorts them, and converts it to a dataframe called ""City_counts"".
-3. The next part filters out rows where the 'Type' column is not null and stores the result in ""train_levels"".
-4. It then calculates the count of unique values in the 'Type' column, sorts them, and converts it to a dataframe called ""label_counts"". 
-
-Overall, the code segment is analyzing and summarizing the distribution of data within the 'City' and 'Type' columns in the ""Train_data"" dataframe."
+label_counts",1,"- Filtering and extracting data from a DataFrame 'Train_data' based on non-null values in the 'City' and 'Type' columns.
+- Counting the occurrences of unique values in the 'City' and 'Type' columns after filtering.
+- Returning the tabulated counts of cities in 'City_counts' and types in 'label_counts'."
 "# normalization
 X_scaler_cc = MinMaxScaler()
 X_train_cc = X_scaler_cc.fit_transform(train_X_cc)
@@ -384,40 +243,58 @@ X_val_cc =  X_scaler_cc.transform(val_X_cc) # intput/output 2D array-like
 
 y_scaler_cc = MinMaxScaler()
 y_train_cc = y_scaler_cc.fit_transform(train_y_cc)
-y_val_cc = y_scaler_cc.transform(val_y_cc) # array-like",2,"The code cluster focuses on normalization of input and output data using MinMaxScaler. It involves creating separate scalers for features (X) and target labels (y) for two different datasets. The process includes fitting the MinMaxScaler with training data and transforming both training and validation datasets. Ultimately, it ensures that the input/output data are scaled within a specified range, which is essential for many machine learning algorithms to perform effectively."
+y_val_cc = y_scaler_cc.transform(val_y_cc) # array-like",2,"This code cluster focuses on data normalization using MinMaxScaler for both input and output arrays in machine learning models. It involves creating separate scalers for X and y data sets, fitting these scalers to training data, and transforming both training and validation data. The process ensures that the input and output data are on a similar scale, which can improve model performance and convergence during training. The code demonstrates a consistent pattern of normalization for input and output data across different datasets, emphasizing the importance of preprocessing data for"
 "X_scaler_ft = MinMaxScaler()
 X_train_ft = X_scaler_ft.fit_transform(train_X_ft)
 X_val_ft =  X_scaler_ft.transform(val_X_ft) # intput/output 2D array-like
 
 y_scaler_ft = MinMaxScaler()
 y_train_ft = y_scaler_ft.fit_transform(train_y_ft)
-y_val_ft = y_scaler_ft.transform(val_y_ft) # array-like",2,"The code cluster focuses on normalization of input and output data using MinMaxScaler. It involves creating separate scalers for features (X) and target labels (y) for two different datasets. The process includes fitting the MinMaxScaler with training data and transforming both training and validation datasets. Ultimately, it ensures that the input/output data are scaled within a specified range, which is essential for many machine learning algorithms to perform effectively."
+y_val_ft = y_scaler_ft.transform(val_y_ft) # array-like",2,"This code cluster focuses on data normalization using MinMaxScaler for both input and output arrays in machine learning models. It involves creating separate scalers for X and y data sets, fitting these scalers to training data, and transforming both training and validation data. The process ensures that the input and output data are on a similar scale, which can improve model performance and convergence during training. The code demonstrates a consistent pattern of normalization for input and output data across different datasets, emphasizing the importance of preprocessing data for"
 "# Date wise confirm case view in an lineplot
 plt.figure(figsize=(15,6))
 sns.lineplot(x=xtrain.Date,y=xtrain.ConfirmedCases,markers=True,style=True)
-plt.xticks(rotation = 'vertical')",3,"This code cluster consists of two visualizations created using the Seaborn library in Python. The first visualization displays a line plot of confirmed cases over time, while the second visualization shows a line plot of fatalities over time. Both visualizations plot the data from a DataFrame (`xtrain`) with Date on the x-axis and the respective cases (ConfirmedCases or Fatalities) on the y-axis. The plots are customized to have markers and different line styles. Finally, the x-axis labels are rotated vertically for better readability. The `plt.figure(figsize=(15,6))` function sets the figure size for each plot."
+plt.xticks(rotation = 'vertical')",3,"- The code cluster involves plotting date-wise data on confirmed cases and fatalities in line plots.
+- The plots are created using matplotlib and seaborn libraries in Python.
+- Both plots have the same x-axis (Date) but different y-axes (ConfirmedCases and Fatalities).
+- Each plot is displayed in a figure with a specified size of 15x6.
+- The line plots use markers and styles for data visualization.
+- The x-axis labels are rotated vertically for better readability."
 "# Date wise Fatalities view in an lineplot
 plt.figure(figsize=(15,6))
 sns.lineplot(x=xtrain.Date,y=xtrain.Fatalities,markers=True,style=True)
-plt.xticks(rotation = 'vertical')",3,"This code cluster consists of two visualizations created using the Seaborn library in Python. The first visualization displays a line plot of confirmed cases over time, while the second visualization shows a line plot of fatalities over time. Both visualizations plot the data from a DataFrame (`xtrain`) with Date on the x-axis and the respective cases (ConfirmedCases or Fatalities) on the y-axis. The plots are customized to have markers and different line styles. Finally, the x-axis labels are rotated vertically for better readability. The `plt.figure(figsize=(15,6))` function sets the figure size for each plot."
+plt.xticks(rotation = 'vertical')",3,"- The code cluster involves plotting date-wise data on confirmed cases and fatalities in line plots.
+- The plots are created using matplotlib and seaborn libraries in Python.
+- Both plots have the same x-axis (Date) but different y-axes (ConfirmedCases and Fatalities).
+- Each plot is displayed in a figure with a specified size of 15x6.
+- The line plots use markers and styles for data visualization.
+- The x-axis labels are rotated vertically for better readability."
 "for f2 in [""Region""]:
     me2 = MeanEncoding(f2, C=0.01 * len(X2[f2].unique()))
     me2.fit(X2, y2)
     X2 = me2.transform(X2)
-    test_2 = me2.transform(test_2)",4,"The code cluster implements mean encoding for the ""Region"" feature in two separate datasets (X1 and X2). It first initializes MeanEncoding objects (me1 and me2) with a specific regularization parameter (C) based on the number of unique values in the ""Region"" feature in each dataset. The code then fits the mean encoding models on the training data (X1 and X2) along with the target values (y1 and y2) and transforms both the training and test data (test_1 and test_2) using the trained mean encoding models."
+    test_2 = me2.transform(test_2)",4,"- The code cluster consists of mean encoding functionality being applied to specific columns in dataframes.
+- It iterates over the columns [""Region""], calculates mean encoding values, fits the mean encoding model, transforms the training and test data using the mean encoding, and assigns the transformed data back to the original variables for two different datasets X1 and X2.
+- This process is repeated for different sets of data, namely X1, y1, test_1, X2, y2, and test"
 "for f1 in [""Region""]:
     me1 = MeanEncoding(f1, C=0.01 * len(X1[f1].unique()))
     me1.fit(X1, y1)
     X1 = me1.transform(X1)
-    test_1 = me1.transform(test_1)",4,"The code cluster implements mean encoding for the ""Region"" feature in two separate datasets (X1 and X2). It first initializes MeanEncoding objects (me1 and me2) with a specific regularization parameter (C) based on the number of unique values in the ""Region"" feature in each dataset. The code then fits the mean encoding models on the training data (X1 and X2) along with the target values (y1 and y2) and transforms both the training and test data (test_1 and test_2) using the trained mean encoding models."
+    test_1 = me1.transform(test_1)",4,"- The code cluster consists of mean encoding functionality being applied to specific columns in dataframes.
+- It iterates over the columns [""Region""], calculates mean encoding values, fits the mean encoding model, transforms the training and test data using the mean encoding, and assigns the transformed data back to the original variables for two different datasets X1 and X2.
+- This process is repeated for different sets of data, namely X1, y1, test_1, X2, y2, and test"
 "X_Train.Country = le.fit_transform(X_Train.Country)
 X_Train['State'] = le.fit_transform(X_Train['State'])
 
-X_Train.head()",5,"This code cluster seems to be related to encoding categorical features in a dataset using LabelEncoder from scikit-learn. The code first transforms the ""Country"" and ""State"" columns in the training dataset X_Train using fit_transform method of LabelEncoder and then assigns the transformed values back to the respective columns. The same process is repeated for the testing dataset X_Test as well. Finally, the first few rows of the transformed datasets are displayed using head() method."
+X_Train.head()",5,"- The code cluster involves encoding categorical variables in the 'Country' and 'State' columns of training and testing datasets using a LabelEncoder (`le`).
+- The LabelEncoder `fit_transform` method is applied to transform the categorical variables into numerical representations for both the training and testing datasets.
+- This code snippet simplifies the process of preparing machine learning data by ensuring consistency in handling categorical data across training and testing sets."
 "X_Test.Country = le.fit_transform(X_Test.Country)
 X_Test['State'] = le.fit_transform(X_Test['State'])
 
-X_Test.head()",5,"This code cluster seems to be related to encoding categorical features in a dataset using LabelEncoder from scikit-learn. The code first transforms the ""Country"" and ""State"" columns in the training dataset X_Train using fit_transform method of LabelEncoder and then assigns the transformed values back to the respective columns. The same process is repeated for the testing dataset X_Test as well. Finally, the first few rows of the transformed datasets are displayed using head() method."
+X_Test.head()",5,"- The code cluster involves encoding categorical variables in the 'Country' and 'State' columns of training and testing datasets using a LabelEncoder (`le`).
+- The LabelEncoder `fit_transform` method is applied to transform the categorical variables into numerical representations for both the training and testing datasets.
+- This code snippet simplifies the process of preparing machine learning data by ensuring consistency in handling categorical data across training and testing sets."
 "
 #1.Ridge Regression
 
@@ -437,21 +314,11 @@ score_Fat = cross_val_score(reg_Fat, X_train, Y_train_Fat, cv = skfold)
 
 #Print the scores
 print (score_CC.mean(), score_Fat.mean())
-",6,"This code implementation cluster is a demonstration of different types of regularized regression models being applied to a dataset for predictive modeling and evaluation. The code snippets show the usage of Ridge Regression, ElasticNet, and Lasso Regression.
+",6,"The code cluster comprises three sections, each dedicated to implementing a different type of regression model (Ridge, ElasticNet, and Lasso Regression) using scikit-learn. 
 
-1. Ridge Regression:
-   - Ridge regression model is imported from scikit-learn's linear_model module.
-   - Two separate Ridge regression models are trained for predicting different targets ('CC' and 'Fat').
-   - Cross-validation is performed using k-folds to calculate the mean score for each target.
-   - The scores for 'CC' and 'Fat' predictions are printed.
+1. For each regression type, the code imports the necessary model class, trains separate classifiers for two target variables (CC and Fat), and evaluates their performance using cross-validation to calculate scores. 
 
-2. ElasticNet:
-   - ElasticNet model is imported from scikit-learn's linear_model module.
-   - Two ElasticNet models are trained for the same targets as in Ridge Regression.
-   - Cross-validation is applied with k-folds to compute the mean scores for each target.
-   - The mean scores for 'CC' and 'Fat' predictions are printed.
-
-3. Lasso"
+2. The regression models are Ridge, ElasticNet, and Lasso, each initialized with specific parameters like alpha or random_state"
 "
 #3. ElasticNet
 
@@ -468,21 +335,11 @@ score_Fat = cross_val_score(reg_Fat, X_train, Y_train_Fat, cv = skfold)
 
 #Print the scores
 print (score_CC.mean(), score_Fat.mean())
-",6,"This code implementation cluster is a demonstration of different types of regularized regression models being applied to a dataset for predictive modeling and evaluation. The code snippets show the usage of Ridge Regression, ElasticNet, and Lasso Regression.
+",6,"The code cluster comprises three sections, each dedicated to implementing a different type of regression model (Ridge, ElasticNet, and Lasso Regression) using scikit-learn. 
 
-1. Ridge Regression:
-   - Ridge regression model is imported from scikit-learn's linear_model module.
-   - Two separate Ridge regression models are trained for predicting different targets ('CC' and 'Fat').
-   - Cross-validation is performed using k-folds to calculate the mean score for each target.
-   - The scores for 'CC' and 'Fat' predictions are printed.
+1. For each regression type, the code imports the necessary model class, trains separate classifiers for two target variables (CC and Fat), and evaluates their performance using cross-validation to calculate scores. 
 
-2. ElasticNet:
-   - ElasticNet model is imported from scikit-learn's linear_model module.
-   - Two ElasticNet models are trained for the same targets as in Ridge Regression.
-   - Cross-validation is applied with k-folds to compute the mean scores for each target.
-   - The mean scores for 'CC' and 'Fat' predictions are printed.
-
-3. Lasso"
+2. The regression models are Ridge, ElasticNet, and Lasso, each initialized with specific parameters like alpha or random_state"
 "
 #2.Lasso Regression
 
@@ -502,21 +359,11 @@ score_Fat = cross_val_score(reg_Fat, X_train, Y_train_Fat, cv = skfold)
 
 #Print the scores
 print (score_CC.mean(), score_Fat.mean())
-",6,"This code implementation cluster is a demonstration of different types of regularized regression models being applied to a dataset for predictive modeling and evaluation. The code snippets show the usage of Ridge Regression, ElasticNet, and Lasso Regression.
+",6,"The code cluster comprises three sections, each dedicated to implementing a different type of regression model (Ridge, ElasticNet, and Lasso Regression) using scikit-learn. 
 
-1. Ridge Regression:
-   - Ridge regression model is imported from scikit-learn's linear_model module.
-   - Two separate Ridge regression models are trained for predicting different targets ('CC' and 'Fat').
-   - Cross-validation is performed using k-folds to calculate the mean score for each target.
-   - The scores for 'CC' and 'Fat' predictions are printed.
+1. For each regression type, the code imports the necessary model class, trains separate classifiers for two target variables (CC and Fat), and evaluates their performance using cross-validation to calculate scores. 
 
-2. ElasticNet:
-   - ElasticNet model is imported from scikit-learn's linear_model module.
-   - Two ElasticNet models are trained for the same targets as in Ridge Regression.
-   - Cross-validation is applied with k-folds to compute the mean scores for each target.
-   - The mean scores for 'CC' and 'Fat' predictions are printed.
-
-3. Lasso"
+2. The regression models are Ridge, ElasticNet, and Lasso, each initialized with specific parameters like alpha or random_state"
 "
 #5. LinearRegression
 
@@ -535,19 +382,15 @@ score_Fat = cross_val_score(reg_Fat, X_train, Y_train_Fat, cv = skfold)
 #Print the scores
 print (score_CC.mean(), score_Fat.mean())
 
-",7,"The code cluster involves training classifiers using different algorithms - Linear Regression and Support Vector Machine (SVM). 
+",7,"The provided code cluster consists of two main sections implementing machine learning models - Linear Regression and Support Vector Machine (SVM).
 
-For Linear Regression:
-1. LinearRegression model is imported from sklearn.linear_model.
-2. Two separate LinearRegression models are trained for predicting two different variables.
-3. Cross-validation is performed using the given data and the trained models to calculate the scores.
-4. Finally, the mean scores for each prediction variable are printed.
+Both sections include model imports from relevant scikit-learn modules (LinearRegression for Linear Regression and svm for SVM).
 
-For SVM:
-1. SVM model is imported from sklearn.
-2. Two separate SVM models are trained for predicting two different variables.
-3. Cross-validation is performed using the given data and the trained models to calculate the scores.
-4. Finally, the mean scores for each prediction variable are printed."
+For each model, a classifier is trained (LinearRegression for Linear Regression and svm.SVC() for SVM) using separate datasets.
+
+Cross-validation is employed to calculate the scores for the models using the cross_val_score function with a specific cross-validation strategy (skfold).
+
+"
 "
 #3. SVM
 
@@ -565,19 +408,15 @@ score_Fat = cross_val_score(reg_Fat, X_train, Y_train_Fat, cv = skfold)
 
 #Print the scores
 print (score_CC.mean(), score_Fat.mean())
-",7,"The code cluster involves training classifiers using different algorithms - Linear Regression and Support Vector Machine (SVM). 
+",7,"The provided code cluster consists of two main sections implementing machine learning models - Linear Regression and Support Vector Machine (SVM).
 
-For Linear Regression:
-1. LinearRegression model is imported from sklearn.linear_model.
-2. Two separate LinearRegression models are trained for predicting two different variables.
-3. Cross-validation is performed using the given data and the trained models to calculate the scores.
-4. Finally, the mean scores for each prediction variable are printed.
+Both sections include model imports from relevant scikit-learn modules (LinearRegression for Linear Regression and svm for SVM).
 
-For SVM:
-1. SVM model is imported from sklearn.
-2. Two separate SVM models are trained for predicting two different variables.
-3. Cross-validation is performed using the given data and the trained models to calculate the scores.
-4. Finally, the mean scores for each prediction variable are printed."
+For each model, a classifier is trained (LinearRegression for Linear Regression and svm.SVC() for SVM) using separate datasets.
+
+Cross-validation is employed to calculate the scores for the models using the cross_val_score function with a specific cross-validation strategy (skfold).
+
+"
 "
 from sklearn.preprocessing import LabelEncoder
 le = LabelEncoder()
@@ -587,15 +426,7 @@ train_df['Province_State'] = le.fit_transform(train_df['Province_State'])
 
 test_df.Country_Region = le.fit_transform(test_df.Country_Region)
 test_df['Province_State'] = le.fit_transform(test_df['Province_State'])
-",8,"The given code cluster is primarily focused on data preprocessing using LabelEncoder for encoding categorical features and then visualization of COVID-19 data. 
-
-The code snippet starts with importing the necessary libraries and initializing the LabelEncoder object. Then, for each dataset (`train_df`, `test_df`, `df_train`, `df_test`, `X_Train`, `X_Test`), it encodes the 'Country_Region' and 'Province_State' columns using the LabelEncoder.
-
-Next, it converts the 'Date' column to datetime format and converts the 'Country_Region' column to string type for both the 'train' and 'test' dataframes. Then, it creates visualizations to display the total number of confirmed cases and fatalities worldwide over time and by country.
-
-Lastly, the code generates plots to visualize the total confirmed cases and fatalities by country.
-
-The code implementation includes data preprocessing steps like encoding categorical variables and converting data types, as well as data visualization using matplotlib to analyze the COVID-19"
+",8,"The code cluster focuses on encoding categorical variables using sklearn's LabelEncoder for various datasets. It employs the fit_transform method to transform 'Country_Region' and 'Province_State' columns into numerical representations. Additionally, there are conversions of specific columns to datetime objects and strings. The cluster then proceeds to perform data aggregation and visualization tasks using matplotlib, including plotting confirmed cases and fatalities globally and by country."
 "from sklearn.preprocessing import LabelEncoder
 le = LabelEncoder()
 
@@ -604,15 +435,7 @@ df_train['Province_State'] = le.fit_transform(df_train['Province_State'])
 
 df_test.Country_Region = le.fit_transform(df_test.Country_Region)
 df_test['Province_State'] = le.fit_transform(df_test['Province_State'])
-",8,"The given code cluster is primarily focused on data preprocessing using LabelEncoder for encoding categorical features and then visualization of COVID-19 data. 
-
-The code snippet starts with importing the necessary libraries and initializing the LabelEncoder object. Then, for each dataset (`train_df`, `test_df`, `df_train`, `df_test`, `X_Train`, `X_Test`), it encodes the 'Country_Region' and 'Province_State' columns using the LabelEncoder.
-
-Next, it converts the 'Date' column to datetime format and converts the 'Country_Region' column to string type for both the 'train' and 'test' dataframes. Then, it creates visualizations to display the total number of confirmed cases and fatalities worldwide over time and by country.
-
-Lastly, the code generates plots to visualize the total confirmed cases and fatalities by country.
-
-The code implementation includes data preprocessing steps like encoding categorical variables and converting data types, as well as data visualization using matplotlib to analyze the COVID-19"
+",8,"The code cluster focuses on encoding categorical variables using sklearn's LabelEncoder for various datasets. It employs the fit_transform method to transform 'Country_Region' and 'Province_State' columns into numerical representations. Additionally, there are conversions of specific columns to datetime objects and strings. The cluster then proceeds to perform data aggregation and visualization tasks using matplotlib, including plotting confirmed cases and fatalities globally and by country."
 "from sklearn.preprocessing import LabelEncoder
 le = LabelEncoder()
 
@@ -626,29 +449,13 @@ print(""*""*50)
 print(X_Train.head())
 print(""*""*50)
 print(X_Test.head())
-print(""*""*50)'",8,"The given code cluster is primarily focused on data preprocessing using LabelEncoder for encoding categorical features and then visualization of COVID-19 data. 
-
-The code snippet starts with importing the necessary libraries and initializing the LabelEncoder object. Then, for each dataset (`train_df`, `test_df`, `df_train`, `df_test`, `X_Train`, `X_Test`), it encodes the 'Country_Region' and 'Province_State' columns using the LabelEncoder.
-
-Next, it converts the 'Date' column to datetime format and converts the 'Country_Region' column to string type for both the 'train' and 'test' dataframes. Then, it creates visualizations to display the total number of confirmed cases and fatalities worldwide over time and by country.
-
-Lastly, the code generates plots to visualize the total confirmed cases and fatalities by country.
-
-The code implementation includes data preprocessing steps like encoding categorical variables and converting data types, as well as data visualization using matplotlib to analyze the COVID-19"
+print(""*""*50)'",8,"The code cluster focuses on encoding categorical variables using sklearn's LabelEncoder for various datasets. It employs the fit_transform method to transform 'Country_Region' and 'Province_State' columns into numerical representations. Additionally, there are conversions of specific columns to datetime objects and strings. The cluster then proceeds to perform data aggregation and visualization tasks using matplotlib, including plotting confirmed cases and fatalities globally and by country."
 "train['Date'] = pd.to_datetime(train['Date'])
 test['Date'] = pd.to_datetime(test['Date'])
 train['Country_Region'] = train['Country_Region'].astype(str)
 # train['Province_State'] = train['Province_State'].astype(str)
 test['Country_Region'] = test['Country_Region'].astype(str)
-# test['Province_State'] = test['Province_State'].astype(str)",8,"The given code cluster is primarily focused on data preprocessing using LabelEncoder for encoding categorical features and then visualization of COVID-19 data. 
-
-The code snippet starts with importing the necessary libraries and initializing the LabelEncoder object. Then, for each dataset (`train_df`, `test_df`, `df_train`, `df_test`, `X_Train`, `X_Test`), it encodes the 'Country_Region' and 'Province_State' columns using the LabelEncoder.
-
-Next, it converts the 'Date' column to datetime format and converts the 'Country_Region' column to string type for both the 'train' and 'test' dataframes. Then, it creates visualizations to display the total number of confirmed cases and fatalities worldwide over time and by country.
-
-Lastly, the code generates plots to visualize the total confirmed cases and fatalities by country.
-
-The code implementation includes data preprocessing steps like encoding categorical variables and converting data types, as well as data visualization using matplotlib to analyze the COVID-19"
+# test['Province_State'] = test['Province_State'].astype(str)",8,"The code cluster focuses on encoding categorical variables using sklearn's LabelEncoder for various datasets. It employs the fit_transform method to transform 'Country_Region' and 'Province_State' columns into numerical representations. Additionally, there are conversions of specific columns to datetime objects and strings. The cluster then proceeds to perform data aggregation and visualization tasks using matplotlib, including plotting confirmed cases and fatalities globally and by country."
 "#Viewing the total number of confirmeed cases and fatalities worldwide
 world = train.groupby('Date')['ConfirmedCases', 'Fatalities'].sum().reset_index()
 
@@ -657,15 +464,7 @@ plt.plot(world['Date'], world['Fatalities'], label = 'Fatalities')
 plt.legend()
 plt.title('Total number of Confirmed Cases and Fatalities Worldwide')
 plt.xticks(rotation = 30)
-plt.show();",8,"The given code cluster is primarily focused on data preprocessing using LabelEncoder for encoding categorical features and then visualization of COVID-19 data. 
-
-The code snippet starts with importing the necessary libraries and initializing the LabelEncoder object. Then, for each dataset (`train_df`, `test_df`, `df_train`, `df_test`, `X_Train`, `X_Test`), it encodes the 'Country_Region' and 'Province_State' columns using the LabelEncoder.
-
-Next, it converts the 'Date' column to datetime format and converts the 'Country_Region' column to string type for both the 'train' and 'test' dataframes. Then, it creates visualizations to display the total number of confirmed cases and fatalities worldwide over time and by country.
-
-Lastly, the code generates plots to visualize the total confirmed cases and fatalities by country.
-
-The code implementation includes data preprocessing steps like encoding categorical variables and converting data types, as well as data visualization using matplotlib to analyze the COVID-19"
+plt.show();",8,"The code cluster focuses on encoding categorical variables using sklearn's LabelEncoder for various datasets. It employs the fit_transform method to transform 'Country_Region' and 'Province_State' columns into numerical representations. Additionally, there are conversions of specific columns to datetime objects and strings. The cluster then proceeds to perform data aggregation and visualization tasks using matplotlib, including plotting confirmed cases and fatalities globally and by country."
 "#Plotting the number of confirmed cases and fatalities for each country
 country = train.groupby('Country_Region')['ConfirmedCases', 'Fatalities'].sum().reset_index()
 
@@ -674,33 +473,11 @@ ax = fig.add_subplot(111)
 ax.barh(country['Country_Region'], country['ConfirmedCases'],label = 'Confirmed Cases')
 ax.barh(country['Country_Region'], country['Fatalities'],label = 'Fatalities')
 ax.legend()
-ax.set_title('Total Confirmed Cases and Fatalities by Country');",8,"The given code cluster is primarily focused on data preprocessing using LabelEncoder for encoding categorical features and then visualization of COVID-19 data. 
-
-The code snippet starts with importing the necessary libraries and initializing the LabelEncoder object. Then, for each dataset (`train_df`, `test_df`, `df_train`, `df_test`, `X_Train`, `X_Test`), it encodes the 'Country_Region' and 'Province_State' columns using the LabelEncoder.
-
-Next, it converts the 'Date' column to datetime format and converts the 'Country_Region' column to string type for both the 'train' and 'test' dataframes. Then, it creates visualizations to display the total number of confirmed cases and fatalities worldwide over time and by country.
-
-Lastly, the code generates plots to visualize the total confirmed cases and fatalities by country.
-
-The code implementation includes data preprocessing steps like encoding categorical variables and converting data types, as well as data visualization using matplotlib to analyze the COVID-19"
+ax.set_title('Total Confirmed Cases and Fatalities by Country');",8,"The code cluster focuses on encoding categorical variables using sklearn's LabelEncoder for various datasets. It employs the fit_transform method to transform 'Country_Region' and 'Province_State' columns into numerical representations. Additionally, there are conversions of specific columns to datetime objects and strings. The cluster then proceeds to perform data aggregation and visualization tasks using matplotlib, including plotting confirmed cases and fatalities globally and by country."
 "last_amount = test.loc[(test['Country_Region']=='China')&(test['Province_State']!='Hubei')&(test['Date']=='2020-03-31'),'ConfirmedCases_x']
-last_fat = test.loc[(test['Country_Region']=='China')&(test['Province_State']!='Hubei')&(test['Date']=='2020-03-31'),'Fatalities_x']",9,"This code cluster seems to be related to updating COVID-19 case data for different regions like China (including Hubei province) and Italy on specific dates. It involves updating the confirmed cases and fatalities for each region based on certain conditions and iterations.
-
-- The code retrieves the last confirmed cases and fatalities for China including Hubei province on a specific date ('2020-03-31').
-- It then performs iterations over a list of dates and updates the data for China excluding Hubei province based on the previous values and the iteration index.
-- Next, it updates the data for China's Hubei province similarly but with different conditions for updating.
-- Finally, it updates the data for Italy on each date with specific formulas based on the date, previous values, and iteration count.
-
-Overall, this code implementation appears to be part of a data processing or analysis task related to tracking and updating COVID-19 case data for different countries and regions on specific dates."
+last_fat = test.loc[(test['Country_Region']=='China')&(test['Province_State']!='Hubei')&(test['Date']=='2020-03-31'),'Fatalities_x']",9,"These code snippets are primarily focused on updating COVID-19 data in a DataFrame. The code involves extracting specific data points (such as confirmed cases and fatalities) based on different conditions related to regions and dates. Common patterns include iterating over a list of dates, adjusting values based on specific criteria, and updating the DataFrame accordingly. The code snippets differentiate between regions like China (with differentiation of Hubei province) and Italy. Updates to the DataFrame are made based on calculations involving the current values, date-based"
 "last_amount = test.loc[(test['Country_Region']=='China')&(test['Province_State']=='Hubei')&(test['Date']=='2020-03-31'),'ConfirmedCases_x']
-last_fat = test.loc[(test['Country_Region']=='China')&(test['Province_State']=='Hubei')&(test['Date']=='2020-03-31'),'Fatalities_x']",9,"This code cluster seems to be related to updating COVID-19 case data for different regions like China (including Hubei province) and Italy on specific dates. It involves updating the confirmed cases and fatalities for each region based on certain conditions and iterations.
-
-- The code retrieves the last confirmed cases and fatalities for China including Hubei province on a specific date ('2020-03-31').
-- It then performs iterations over a list of dates and updates the data for China excluding Hubei province based on the previous values and the iteration index.
-- Next, it updates the data for China's Hubei province similarly but with different conditions for updating.
-- Finally, it updates the data for Italy on each date with specific formulas based on the date, previous values, and iteration count.
-
-Overall, this code implementation appears to be part of a data processing or analysis task related to tracking and updating COVID-19 case data for different countries and regions on specific dates."
+last_fat = test.loc[(test['Country_Region']=='China')&(test['Province_State']=='Hubei')&(test['Date']=='2020-03-31'),'Fatalities_x']",9,"These code snippets are primarily focused on updating COVID-19 data in a DataFrame. The code involves extracting specific data points (such as confirmed cases and fatalities) based on different conditions related to regions and dates. Common patterns include iterating over a list of dates, adjusting values based on specific criteria, and updating the DataFrame accordingly. The code snippets differentiate between regions like China (with differentiation of Hubei province) and Italy. Updates to the DataFrame are made based on calculations involving the current values, date-based"
 "i = 0
 k = 30
 for date in dates:
@@ -709,42 +486,21 @@ for date in dates:
     test.loc[(test['Country_Region']=='China')&(test['Province_State']!='Hubei')&(test['Date']==date),
              'Fatalities_x']= last_fat.values
     test.loc[(test['Country_Region']=='China')&(test['Province_State']!='Hubei')&(test['Date']==date),
-             'ConfirmedCases_x']= last_amount.values + i",9,"This code cluster seems to be related to updating COVID-19 case data for different regions like China (including Hubei province) and Italy on specific dates. It involves updating the confirmed cases and fatalities for each region based on certain conditions and iterations.
-
-- The code retrieves the last confirmed cases and fatalities for China including Hubei province on a specific date ('2020-03-31').
-- It then performs iterations over a list of dates and updates the data for China excluding Hubei province based on the previous values and the iteration index.
-- Next, it updates the data for China's Hubei province similarly but with different conditions for updating.
-- Finally, it updates the data for Italy on each date with specific formulas based on the date, previous values, and iteration count.
-
-Overall, this code implementation appears to be part of a data processing or analysis task related to tracking and updating COVID-19 case data for different countries and regions on specific dates."
+             'ConfirmedCases_x']= last_amount.values + i",9,"These code snippets are primarily focused on updating COVID-19 data in a DataFrame. The code involves extracting specific data points (such as confirmed cases and fatalities) based on different conditions related to regions and dates. Common patterns include iterating over a list of dates, adjusting values based on specific criteria, and updating the DataFrame accordingly. The code snippets differentiate between regions like China (with differentiation of Hubei province) and Italy. Updates to the DataFrame are made based on calculations involving the current values, date-based"
 "k=30
 i=0
 for date in dates:
     k = k-1
     i = i+1
     test.loc[(test['Country_Region']=='China')&(test['Province_State']=='Hubei')&(test['Date']==date),'ConfirmedCases_x']= last_amount.values[0]
-    test.loc[(test['Country_Region']=='China')&(test['Province_State']=='Hubei')&(test['Date']==date),'Fatalities_x']= last_fat.values[0] + i ",9,"This code cluster seems to be related to updating COVID-19 case data for different regions like China (including Hubei province) and Italy on specific dates. It involves updating the confirmed cases and fatalities for each region based on certain conditions and iterations.
-
-- The code retrieves the last confirmed cases and fatalities for China including Hubei province on a specific date ('2020-03-31').
-- It then performs iterations over a list of dates and updates the data for China excluding Hubei province based on the previous values and the iteration index.
-- Next, it updates the data for China's Hubei province similarly but with different conditions for updating.
-- Finally, it updates the data for Italy on each date with specific formulas based on the date, previous values, and iteration count.
-
-Overall, this code implementation appears to be part of a data processing or analysis task related to tracking and updating COVID-19 case data for different countries and regions on specific dates."
+    test.loc[(test['Country_Region']=='China')&(test['Province_State']=='Hubei')&(test['Date']==date),'Fatalities_x']= last_fat.values[0] + i ",9,"These code snippets are primarily focused on updating COVID-19 data in a DataFrame. The code involves extracting specific data points (such as confirmed cases and fatalities) based on different conditions related to regions and dates. Common patterns include iterating over a list of dates, adjusting values based on specific criteria, and updating the DataFrame accordingly. The code snippets differentiate between regions like China (with differentiation of Hubei province) and Italy. Updates to the DataFrame are made based on calculations involving the current values, date-based"
 "for date in dates:
     k = k-1
     i = i+1
     test.loc[(test['Country_Region']=='Italy')&(test['Date']==date),
             'ConfirmedCases_x']=last_amount.values[0] + i*(5000-(100*i))
     test.loc[(test['Country_Region']=='Italy')&(test['Date']==date),
-             'Fatalities_x'] =  last_fat.values[0]+i*(800-(10*i))",9,"This code cluster seems to be related to updating COVID-19 case data for different regions like China (including Hubei province) and Italy on specific dates. It involves updating the confirmed cases and fatalities for each region based on certain conditions and iterations.
-
-- The code retrieves the last confirmed cases and fatalities for China including Hubei province on a specific date ('2020-03-31').
-- It then performs iterations over a list of dates and updates the data for China excluding Hubei province based on the previous values and the iteration index.
-- Next, it updates the data for China's Hubei province similarly but with different conditions for updating.
-- Finally, it updates the data for Italy on each date with specific formulas based on the date, previous values, and iteration count.
-
-Overall, this code implementation appears to be part of a data processing or analysis task related to tracking and updating COVID-19 case data for different countries and regions on specific dates."
+             'Fatalities_x'] =  last_fat.values[0]+i*(800-(10*i))",9,"These code snippets are primarily focused on updating COVID-19 data in a DataFrame. The code involves extracting specific data points (such as confirmed cases and fatalities) based on different conditions related to regions and dates. Common patterns include iterating over a list of dates, adjusting values based on specific criteria, and updating the DataFrame accordingly. The code snippets differentiate between regions like China (with differentiation of Hubei province) and Italy. Updates to the DataFrame are made based on calculations involving the current values, date-based"
 "#X_Train = df_train.loc[:, ['State', 'Country', 'Date']]
 X_Train = df_train.copy()
 
@@ -754,15 +510,11 @@ X_Train['State'] = X_Train.loc[:, ['State', 'Country']].apply(lambda x : fillSta
 X_Train.loc[:, 'Date'] = X_Train.Date.dt.strftime(""%m%d"")
 X_Train[""Date""]  = X_Train[""Date""].astype(int)
 
-X_Train.head()'",10,"In the given code cluster, the main objective is to prepare the training and testing data sets for a machine learning model. The process involves the following steps for both `X_Train` and `X_Test` dataframes:
-
-1. Initial data selection: The code selects specific columns ('State', 'Country', 'Date') from the original dataframes (`df_train` and `df_test`) to form the new dataframes `X_Train` and `X_Test` respectively.
-  
-2. Handling missing values: It fills missing values in the 'State' column with a predefined constant (EMPTY_VAL) using `fillna()` method.
-  
-3. State filling based on country: It applies a custom function `fillState()` to update the 'State' values by considering both 'State' and 'Country' columns using the `apply()` method.
-
-4. Date formatting: The 'Date' columns are converted to string format using `strftime()` with the format ""%m%d"" and then converted"
+X_Train.head()'",10,"- The code cluster processes training and test datasets (`df_train` and `df_test`) for a machine learning model.
+- Both datasets are copied to `X_Train` and `X_Test`, respectively to prevent altering the original data.
+- The 'State' column in both datasets is filled with a specific value if it is missing.
+- A custom function `fillState` is applied to 'State' and 'Country' columns to fill missing values based on country information.
+- The 'Date"
 "#X_Test = df_test.loc[:, ['State', 'Country', 'Date']]
 X_Test = df_test.copy()
 
@@ -772,68 +524,50 @@ X_Test['State'] = X_Test.loc[:, ['State', 'Country']].apply(lambda x : fillState
 X_Test.loc[:, 'Date'] = X_Test.Date.dt.strftime(""%m%d"")
 X_Test[""Date""]  = X_Test[""Date""].astype(int)
 
-X_Test.head()'",10,"In the given code cluster, the main objective is to prepare the training and testing data sets for a machine learning model. The process involves the following steps for both `X_Train` and `X_Test` dataframes:
-
-1. Initial data selection: The code selects specific columns ('State', 'Country', 'Date') from the original dataframes (`df_train` and `df_test`) to form the new dataframes `X_Train` and `X_Test` respectively.
-  
-2. Handling missing values: It fills missing values in the 'State' column with a predefined constant (EMPTY_VAL) using `fillna()` method.
-  
-3. State filling based on country: It applies a custom function `fillState()` to update the 'State' values by considering both 'State' and 'Country' columns using the `apply()` method.
-
-4. Date formatting: The 'Date' columns are converted to string format using `strftime()` with the format ""%m%d"" and then converted"
+X_Test.head()'",10,"- The code cluster processes training and test datasets (`df_train` and `df_test`) for a machine learning model.
+- Both datasets are copied to `X_Train` and `X_Test`, respectively to prevent altering the original data.
+- The 'State' column in both datasets is filled with a specific value if it is missing.
+- A custom function `fillState` is applied to 'State' and 'Country' columns to fill missing values based on country information.
+- The 'Date"
 "# CHANGE TO PD.DATETIME
 xtrain.Date = pd.to_datetime(xtrain.Date, infer_datetime_format=True)
-xtest.Date = pd.to_datetime(xtest.Date, infer_datetime_format=True)",11,"These code snippets are performing a similar task of converting the 'Date' column in different data sources (xtrain, xtest, df_train, df_test) to datetime format using the `pd.to_datetime` function from the pandas library. The `infer_datetime_format=True` argument is used to automatically infer the datetime format. This conversion is essential for treating dates as datetime objects which allows for better date manipulation and analysis in data processing and machine learning tasks."
+xtest.Date = pd.to_datetime(xtest.Date, infer_datetime_format=True)",11,"- The code cluster leverages the `pd.to_datetime` function from the Pandas library to convert date columns to datetime format across multiple data frames.
+- It includes common parameters like `infer_datetime_format=True` to interpret the date format automatically during conversion.
+- The primary purpose of this code is to ensure consistency and compatibility by converting various date columns in different data frames to a standardized datetime format for ease of analysis and manipulation."
 "df_train['Date'] = pd.to_datetime(df_train['Date'], infer_datetime_format=True)
-df_test['Date'] = pd.to_datetime(df_test['Date'], infer_datetime_format=True)",11,"These code snippets are performing a similar task of converting the 'Date' column in different data sources (xtrain, xtest, df_train, df_test) to datetime format using the `pd.to_datetime` function from the pandas library. The `infer_datetime_format=True` argument is used to automatically infer the datetime format. This conversion is essential for treating dates as datetime objects which allows for better date manipulation and analysis in data processing and machine learning tasks."
+df_test['Date'] = pd.to_datetime(df_test['Date'], infer_datetime_format=True)",11,"- The code cluster leverages the `pd.to_datetime` function from the Pandas library to convert date columns to datetime format across multiple data frames.
+- It includes common parameters like `infer_datetime_format=True` to interpret the date format automatically during conversion.
+- The primary purpose of this code is to ensure consistency and compatibility by converting various date columns in different data frames to a standardized datetime format for ease of analysis and manipulation."
 "#Import Date
 xtrain = pd.read_csv(""/kaggle/input/covid19-global-forecasting-week-2/train.csv"")
 xtest = pd.read_csv(""/kaggle/input/covid19-global-forecasting-week-2/test.csv"")
 xsubmission = pd.read_csv(""/kaggle/input/covid19-global-forecasting-week-2/submission.csv"")
 # view shape of test and train data
 print(xtrain.shape)
-print(xtest.shape)",12,"The code implementation is importing the required libraries and datasets related to COVID19 global forecasting for training, testing, and submission. It then reads in the datasets and displays their shapes in terms of rows and columns to understand the data dimensions. The code repeats the reading process for the datasets and displays their shapes again for confirmation. This snippet serves as an initial setup to load and examine the data for further analysis and modeling tasks in the context of COVID19 global forecasting."
+print(xtest.shape)",12,"The code cluster primarily involves importing and reading COVID-19 global forecasting data sets from CSV files. It includes loading train, test, and submission data using Pandas. The code also displays the shape of the train, test, and submission datasets to provide an overview of their dimensions. The common pattern across the code cluster is the use of Pandas to handle data manipulation tasks efficiently for further analysis and forecasting purposes."
 "#reading data
 data = pd.read_csv('../input/covid19-global-forecasting-week-2/train.csv')
 test_data = pd.read_csv('../input/covid19-global-forecasting-week-2/test.csv')
 submission = pd.read_csv('../input/covid19-global-forecasting-week-2/submission.csv')
 print(data.shape)
 print(test_data.shape)
-print(submission.shape)",12,"The code implementation is importing the required libraries and datasets related to COVID19 global forecasting for training, testing, and submission. It then reads in the datasets and displays their shapes in terms of rows and columns to understand the data dimensions. The code repeats the reading process for the datasets and displays their shapes again for confirmation. This snippet serves as an initial setup to load and examine the data for further analysis and modeling tasks in the context of COVID19 global forecasting."
+print(submission.shape)",12,"The code cluster primarily involves importing and reading COVID-19 global forecasting data sets from CSV files. It includes loading train, test, and submission data using Pandas. The code also displays the shape of the train, test, and submission datasets to provide an overview of their dimensions. The common pattern across the code cluster is the use of Pandas to handle data manipulation tasks efficiently for further analysis and forecasting purposes."
 "#
 def rmsle (y_true, y_pred):
-    return np.sqrt(np.mean(np.power(np.log1p(y_pred) - np.log1p(y_true), 2)))'",13,"The given code cluster seems to focus on implementing the Root Mean Squared Log Error (RMSLE) metric for evaluating the performance of machine learning models. The code includes different implementations of the RMSLE function using numpy and keras backend, and also includes some visualization libraries for plotting graphs.
-
-The first two functions define the RMSLE calculation using numpy and Keras backend. The functions calculate the logarithm of the predicted and actual values, and then compute the square root of the mean square difference between them.
-
-There are also two identical functions named 'RMSLE' which seem to have been accidentally duplicated in the code cluster. These functions also calculate RMSLE using numpy.
-
-Additionally, the code includes imports for plotly, matplotlib for data visualization, and tqdm for progress tracking during iterations.
-
-Overall, the code cluster appears to be related to calculating the RMSLE metric, implementing it in different ways using numpy and keras backend, and includes visualization libraries for plotting graphs."
+    return np.sqrt(np.mean(np.power(np.log1p(y_pred) - np.log1p(y_true), 2)))'",13,"- The code cluster primarily focuses on implementing Root Mean Squared Log Error (RMSLE) functions for evaluating predictive models, often seen in Kaggle competitions for evaluation metrics.
+- These functions calculate the square root of the mean of the squared differences between the logarithm of the predicted and actual values, with an added one to prevent negative values in the logarithm calculation.
+- The code employs libraries such as NumPy, Keras, Plotly, and Matplotlib for mathematical computations, plotting visualizations"
 "# customize loss function which is aligned with kaggle evaluation
 def root_mean_squared_log_error(y_true, y_pred):
-    return K.sqrt(K.mean(K.square(K.log(y_pred + 1) - K.log(y_true + 1)))) ",13,"The given code cluster seems to focus on implementing the Root Mean Squared Log Error (RMSLE) metric for evaluating the performance of machine learning models. The code includes different implementations of the RMSLE function using numpy and keras backend, and also includes some visualization libraries for plotting graphs.
-
-The first two functions define the RMSLE calculation using numpy and Keras backend. The functions calculate the logarithm of the predicted and actual values, and then compute the square root of the mean square difference between them.
-
-There are also two identical functions named 'RMSLE' which seem to have been accidentally duplicated in the code cluster. These functions also calculate RMSLE using numpy.
-
-Additionally, the code includes imports for plotly, matplotlib for data visualization, and tqdm for progress tracking during iterations.
-
-Overall, the code cluster appears to be related to calculating the RMSLE metric, implementing it in different ways using numpy and keras backend, and includes visualization libraries for plotting graphs."
+    return K.sqrt(K.mean(K.square(K.log(y_pred + 1) - K.log(y_true + 1)))) ",13,"- The code cluster primarily focuses on implementing Root Mean Squared Log Error (RMSLE) functions for evaluating predictive models, often seen in Kaggle competitions for evaluation metrics.
+- These functions calculate the square root of the mean of the squared differences between the logarithm of the predicted and actual values, with an added one to prevent negative values in the logarithm calculation.
+- The code employs libraries such as NumPy, Keras, Plotly, and Matplotlib for mathematical computations, plotting visualizations"
 "#metric
 
 def RMSLE(pred,actual):
-        return np.sqrt(np.mean(np.power((np.log(pred+1)-np.log(actual+1)),2)))",13,"The given code cluster seems to focus on implementing the Root Mean Squared Log Error (RMSLE) metric for evaluating the performance of machine learning models. The code includes different implementations of the RMSLE function using numpy and keras backend, and also includes some visualization libraries for plotting graphs.
-
-The first two functions define the RMSLE calculation using numpy and Keras backend. The functions calculate the logarithm of the predicted and actual values, and then compute the square root of the mean square difference between them.
-
-There are also two identical functions named 'RMSLE' which seem to have been accidentally duplicated in the code cluster. These functions also calculate RMSLE using numpy.
-
-Additionally, the code includes imports for plotly, matplotlib for data visualization, and tqdm for progress tracking during iterations.
-
-Overall, the code cluster appears to be related to calculating the RMSLE metric, implementing it in different ways using numpy and keras backend, and includes visualization libraries for plotting graphs."
+        return np.sqrt(np.mean(np.power((np.log(pred+1)-np.log(actual+1)),2)))",13,"- The code cluster primarily focuses on implementing Root Mean Squared Log Error (RMSLE) functions for evaluating predictive models, often seen in Kaggle competitions for evaluation metrics.
+- These functions calculate the square root of the mean of the squared differences between the logarithm of the predicted and actual values, with an added one to prevent negative values in the logarithm calculation.
+- The code employs libraries such as NumPy, Keras, Plotly, and Matplotlib for mathematical computations, plotting visualizations"
 "import plotly.express as px
 import plotly.graph_objs as go
 from plotly.subplots import make_subplots
@@ -848,31 +582,33 @@ from IPython.display import HTML
 from tqdm import tqdm
 
 def RMSLE(pred,actual):
-    return np.sqrt(np.mean(np.power((np.log(pred+1)-np.log(actual+1)),2)))",13,"The given code cluster seems to focus on implementing the Root Mean Squared Log Error (RMSLE) metric for evaluating the performance of machine learning models. The code includes different implementations of the RMSLE function using numpy and keras backend, and also includes some visualization libraries for plotting graphs.
-
-The first two functions define the RMSLE calculation using numpy and Keras backend. The functions calculate the logarithm of the predicted and actual values, and then compute the square root of the mean square difference between them.
-
-There are also two identical functions named 'RMSLE' which seem to have been accidentally duplicated in the code cluster. These functions also calculate RMSLE using numpy.
-
-Additionally, the code includes imports for plotly, matplotlib for data visualization, and tqdm for progress tracking during iterations.
-
-Overall, the code cluster appears to be related to calculating the RMSLE metric, implementing it in different ways using numpy and keras backend, and includes visualization libraries for plotting graphs."
+    return np.sqrt(np.mean(np.power((np.log(pred+1)-np.log(actual+1)),2)))",13,"- The code cluster primarily focuses on implementing Root Mean Squared Log Error (RMSLE) functions for evaluating predictive models, often seen in Kaggle competitions for evaluation metrics.
+- These functions calculate the square root of the mean of the squared differences between the logarithm of the predicted and actual values, with an added one to prevent negative values in the logarithm calculation.
+- The code employs libraries such as NumPy, Keras, Plotly, and Matplotlib for mathematical computations, plotting visualizations"
 "print('Start model training')
 start_time = time.time()
 history_cc = model_cc.fit(X_train_cc, y_train_cc, epochs = 100,validation_data = (X_val_cc, y_val_cc), verbose = 2, callbacks=[early_stop])
 model_cc.save(""model_cc.h5"")
-print('Time spent for model training is {} minutes'.format(round((time.time()-start_time)/60,1)))'",14,"The code cluster provided involves training two different models (`model_cc` and `model_ft`) on different datasets and saving the trained models as ""model_cc.h5"" and ""model_ft.h5"" respectively. Each model is trained for 100 epochs with early stopping callback. The total time taken for model training is calculated and displayed in minutes for each model."
+print('Time spent for model training is {} minutes'.format(round((time.time()-start_time)/60,1)))'",14,"The given code cluster consists of two segments which focus on model training and evaluation. Both segments start by printing a message indicating the beginning of model training. The code then records the start time, trains a model using fit method with specific datasets and parameters, saves the trained model to a file, and finally prints the time taken for model training in minutes. This cluster follows a pattern of setting up, training, saving, and evaluating neural network models for different tasks, with the primary purpose being the training and"
 "print('Start model training')
 start_time = time.time()
 history_ft = model_ft.fit(X_train_ft, y_train_ft, epochs = 100,validation_data = (X_val_ft, y_val_ft), verbose = 2, callbacks=[early_stop])
 model_ft.save(""model_ft.h5"")
-print('Time spent for model training is {} minutes'.format(round((time.time()-start_time)/60,1)))'",14,"The code cluster provided involves training two different models (`model_cc` and `model_ft`) on different datasets and saving the trained models as ""model_cc.h5"" and ""model_ft.h5"" respectively. Each model is trained for 100 epochs with early stopping callback. The total time taken for model training is calculated and displayed in minutes for each model."
+print('Time spent for model training is {} minutes'.format(round((time.time()-start_time)/60,1)))'",14,"The given code cluster consists of two segments which focus on model training and evaluation. Both segments start by printing a message indicating the beginning of model training. The code then records the start time, trains a model using fit method with specific datasets and parameters, saves the trained model to a file, and finally prints the time taken for model training in minutes. This cluster follows a pattern of setting up, training, saving, and evaluating neural network models for different tasks, with the primary purpose being the training and"
 "le = preprocessing.LabelEncoder()
 train['province_encoder'] = le.fit_transform(train['Province_State'])
-test['province_encoder'] = le.transform(test['Province_State'])",15,"The code cluster provided involves data preprocessing tasks using scikit-learn's LabelEncoder, Pandas, and NumPy. It encodes categorical variables, concatenates DataFrames, and converts forecast IDs to integers. The LabelEncoder is used to transform the 'Province_State' column in the training and testing datasets. Two DataFrames, `df_out` and `soln`, are created to store forecast results for ConfirmedCases and Fatalities. The forecast results are then concatenated to the `df_out` DataFrame and the forecast IDs are converted to integers."
+test['province_encoder'] = le.transform(test['Province_State'])",15,"- The code cluster uses LabelEncoder from scikit-learn to encode province data.
+- It creates a new DataFrame for storing forecast results with columns 'ForecastId', 'ConfirmedCases', and 'Fatalities'.
+- It transforms and fits the encoder on the training data and applies the same transformation to the test data.
+- The forecast results are stored in a DataFrame and then concatenated with an existing DataFrame.
+- Finally, it ensures the 'ForecastId' column in the result DataFrame is converted to integer type"
 "df_out = pd.DataFrame({'ForecastId': [], 'ConfirmedCases': [], 'Fatalities': []})
 soln = pd.DataFrame({'ForecastId': test_df.ForecastId, 'ConfirmedCases': Y_pred_CC, 'Fatalities': Y_pred_Fat})
 df_out = pd.concat([df_out, soln], axis=0)
-df_out.ForecastId = df_out.ForecastId.astype('int')",15,"The code cluster provided involves data preprocessing tasks using scikit-learn's LabelEncoder, Pandas, and NumPy. It encodes categorical variables, concatenates DataFrames, and converts forecast IDs to integers. The LabelEncoder is used to transform the 'Province_State' column in the training and testing datasets. Two DataFrames, `df_out` and `soln`, are created to store forecast results for ConfirmedCases and Fatalities. The forecast results are then concatenated to the `df_out` DataFrame and the forecast IDs are converted to integers."
-"RMSLE(df_val[(df_val['ConfirmedCases'].isnull() == False)]['ConfirmedCases'].values,df_val[(df_val['ConfirmedCases'].isnull() == False)]['ConfirmedCases_hat'].values)",16,"The code cluster calculates the Root Mean Squared Logarithmic Error (RMSLE) for the predicted and actual values of 'ConfirmedCases' and 'Fatalities' in a dataframe 'df_val'. It filters out the rows where the actual values are not null, then extracts the actual and predicted values for each case separately. The RMSLE is then computed using these values to evaluate the accuracy of the predictions for ConfirmedCases and Fatalities."
-"RMSLE(df_val[(df_val['Fatalities'].isnull() == False)]['Fatalities'].values,df_val[(df_val['Fatalities'].isnull() == False)]['Fatalities_hat'].values)",16,"The code cluster calculates the Root Mean Squared Logarithmic Error (RMSLE) for the predicted and actual values of 'ConfirmedCases' and 'Fatalities' in a dataframe 'df_val'. It filters out the rows where the actual values are not null, then extracts the actual and predicted values for each case separately. The RMSLE is then computed using these values to evaluate the accuracy of the predictions for ConfirmedCases and Fatalities."
+df_out.ForecastId = df_out.ForecastId.astype('int')",15,"- The code cluster uses LabelEncoder from scikit-learn to encode province data.
+- It creates a new DataFrame for storing forecast results with columns 'ForecastId', 'ConfirmedCases', and 'Fatalities'.
+- It transforms and fits the encoder on the training data and applies the same transformation to the test data.
+- The forecast results are stored in a DataFrame and then concatenated with an existing DataFrame.
+- Finally, it ensures the 'ForecastId' column in the result DataFrame is converted to integer type"
+"RMSLE(df_val[(df_val['ConfirmedCases'].isnull() == False)]['ConfirmedCases'].values,df_val[(df_val['ConfirmedCases'].isnull() == False)]['ConfirmedCases_hat'].values)",16,The code cluster calculates the Root Mean Squared Logarithmic Error (RMSLE) for the predicted values compared to the actual values. It specifically focuses on evaluating the accuracy of predicted 'ConfirmedCases' and 'Fatalities'. It filters out null values before computing the RMSLE for each case. The function takes in the actual cases and their corresponding predicted cases for analysis.
+"RMSLE(df_val[(df_val['Fatalities'].isnull() == False)]['Fatalities'].values,df_val[(df_val['Fatalities'].isnull() == False)]['Fatalities_hat'].values)",16,The code cluster calculates the Root Mean Squared Logarithmic Error (RMSLE) for the predicted values compared to the actual values. It specifically focuses on evaluating the accuracy of predicted 'ConfirmedCases' and 'Fatalities'. It filters out null values before computing the RMSLE for each case. The function takes in the actual cases and their corresponding predicted cases for analysis.

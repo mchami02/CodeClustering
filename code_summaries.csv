@@ -1,0 +1,86 @@
+Code_Block,Summary
+"# Plot training & validation loss values
+plt.figure(figsize=(8,5))
+plt.plot(history_cc.history['loss'])
+plt.plot(history_cc.history['val_loss'])
+plt.title('CC Model loss')
+plt.ylabel('Loss')
+plt.xlabel('Epoch')
+plt.legend(['Train', 'Test'], loc='upper left')
+plt.show()",Plot the training and validation loss values as a function of the history_cc. history. hold_value_loss values in a matplotlib figure.
+"# Plot training & validation loss values
+plt.figure(figsize=(8,5))
+plt.plot(history_ft.history['loss'])
+plt.plot(history_ft.history['val_loss'])
+plt.title('FT Model loss')
+plt.ylabel('Loss')
+plt.xlabel('Epoch')
+plt.legend(['Train', 'Test'], loc='upper left')
+plt.show()",Plot the training & validation loss values as a function of the history_ft. history. val_loss. It also plots the label and the value loss.
+"italy = df_train[df_train['Country_Region'] == 'Italy']
+plt.figure(figsize=(20,10))
+sns.lineplot(x = 'Date' , y = 'Fatalities' , data = italy,color='orange')
+plt.xticks(rotation = 90,size=12)
+plt.xlabel('Date',size=15)
+plt.ylabel('Fatalities',size=15)
+plt.title('Fatalities in Italy per Date',size=20)
+plt.show()",Convenience function to plot the latities as a line plot. This function is intended to be called from the fit function in a package.
+"usa = df_train[df_train['Country_Region'] == 'US']
+plt.figure(figsize=(20,10))
+sns.lineplot(x = 'Date' , y = 'ConfirmedCases' , data = usa,color='g')
+plt.xticks(rotation = 90,size=13)
+plt.xlabel('Date',size=15)
+plt.ylabel('Confirmed Cases',size=15)
+plt.title('Confirmed Cases in US per Date',size=20)
+plt.show()",This is the function that is used to plot the training data. It is assumed that the variable country_Region ==US has already been set.
+"china  = df_train[df_train['Country_Region'] == 'China']
+
+plt.figure(figsize=(20,10))
+sns.lineplot(x = 'Date' , y = 'ConfirmedCases' , data = china,color='aqua')
+plt.xticks(rotation = 90,size=12)
+plt.xlabel('Date',size=15)
+plt.ylabel('Confirmed Cases',size=15)
+sns.set_context('paper')
+plt.title('Confirmed Cases in China per Date',size=20)
+plt.show()",Convenience function to plot the Trains in a China region as a figure of the date and the number of cortical observations.
+"china  = df_train[df_train['Country_Region'] == 'China']
+
+plt.figure(figsize=(20,10))
+sns.lineplot(x = 'Date' , y = 'Fatalities' , data = china,color='grey')
+plt.xticks(rotation = 90,size=12)
+plt.xlabel('Date',size=15)
+plt.ylabel('Fatalities',size=15)
+sns.set_context('paper')
+plt.title('Fatalities in China per Date',size=20)
+plt.show()",Convenience function to plot the latities in the China region as well as the number of observations for each variable in df_train.
+"plt.figure(figsize=(20,10))
+sns.barplot(x='Province_State',y='ConfirmedCases',data=usa,ci=None)
+plt.xticks(rotation = 90,size=13)
+plt.xlabel('Province_State',size=15)
+plt.ylabel('Confirmed Cases',size=15)
+plt.title('Confirmed Cases in US Province_State ',size=20)
+plt.show()",Make a horizontal barplot of the usa state and the density of states. This is the figure that will be shown in the final figure.
+"plt.figure(figsize=(20,10))
+sns.barplot(x='Province_State',y='ConfirmedCases',data=china)
+plt.xticks(rotation = 90,size=13)
+plt.title('Confirmed Cases in China Province_State',size=20)
+plt.ylabel('Confirmed Cases',size=15)
+plt.xlabel('Province_State',size=15)
+plt.show()",Returns a matplotlib figure of the China Provise case as a function of size 1. 10. The figure will contain the title and the data.
+"italy = df_train[df_train['Country_Region'] == 'Italy']
+plt.figure(figsize=(20,10))
+sns.lineplot(x = 'Date' , y = 'ConfirmedCases' , data = italy)
+plt.xticks(rotation = 90,size=12)
+plt.xlabel('Date',size=15)
+plt.ylabel('Confirmed Cases',size=15)
+plt.title('Confirmed Cases per date in Italy',size=20)
+plt.show()",Convenience function to plot it and show it on the graph. This function is intended to be used in plot_data_from_labels.
+"from sklearn import linear_model
+from sklearn.ensemble import RandomForestRegressor
+
+cls = RandomForestRegressor(n_estimators=170)
+cls.fit(xTrain, yTrain)
+pred = cls.predict(xTest)
+pred = numpy.exp(pred)
+closs = cls.score(xTrain, yTrain)
+closs",Builds a linear model from sklearn.ensemble. Random section 9. 1. 2. 3. The linear_model can be found using fit and predict functions.
